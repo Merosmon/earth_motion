@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>晨昏圈是条大圆 · 地球运动（高中地理·人教版选择性必修一）</title>
+
+<!-- 共享层在 learning/assets/，课件在 learning/subjects/<slug>/lessons/ 下，所以是 ../../../assets/ -->
+<link rel="stylesheet" href="../../../assets/sayo/sayo.css">
+<link rel="stylesheet" href="../../../assets/learn-theme.css">
+<link rel="stylesheet" href="../assets/style.css">
+
+<!-- 主题要在首帧前应用，避免闪白/闪黑 -->
+<script src="../../../assets/learn-theme.js"></script>
+<script>LearnTheme.apply();</script>
+</head>
+
+<body class="lesson-body">
+
+<nav class="lesson-bar">
+  <a href="../index.html">← 返回课程</a>
+  <span>地球运动（高中地理·人教版选择性必修一）</span>
+  <span class="lesson-bar__no">0004</span>
+  <!-- 课件页自带主题开关：学生从文件管理器直接打开课件时也能切暗色 -->
+  <label class="syo-toggle syo-toggle--theme lesson-bar__toggle" title="切换深浅主题" aria-label="切换深浅主题">
+    <input type="checkbox" id="lesson-theme-checkbox" checked>
+    <span class="syo-toggle-track"></span>
+    <span class="syo-toggle-knob">
+      <svg class="syo-toggle-sun" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="3.5" stroke="#f57c00" stroke-width="1.5"/><path d="M10 2v2.5M10 15.5V18M2 10h2.5M15.5 10H18M4.34 4.34l1.77 1.77M13.89 13.89l1.77 1.77M4.34 15.66l1.77-1.77M13.89 6.11l1.77-1.77" stroke="#f57c00" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg class="syo-toggle-moon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.5 12.5A6 6 0 019 4.5a6 6 0 007.5 8z" stroke="#5c6bc0" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </span>
+  </label>
+</nav>
+
+<article class="lesson">
+
+  <header class="lesson-header">
+    <span class="lesson-header__eyebrow">0004 · 晨昏圈是条大圆</span>
+    <h1>晨昏圈是条大圆</h1>
+    <p class="lesson-goal"><b>本节目标：</b>能证明晨昏圈是过地心的大圆、垂直于太阳光线，并由它与纬线、经线的交点定出昼夜分界，为后面算昼长、算地方时立好出发点。</p>
+  </header>
+
+  <!-- ── 正文：渲染器按内容文件（lessons/<序号>-<节点id>.md）产出，块词汇见 docs/规范/课件内容格式.md ── -->
+
+  <div class="lesson-note">
+    <b>这一节在整章里的位置</b>
+    <p>三节课下来，手里已经有了三样东西：太阳高度可以用角度量、地球的两笔账分得开、直射点的纬度随日期在两条回归线之间往返。接下来要处理的是昼半球与夜半球之间那条线——卫星云图上看得见它，地球上却没有人能走到它跟前。这一节把它的形状和位置定下来；定下来之后，算昼夜长短、算地方时才有共同的出发点。</p>
+  </div>
+
+  <h2>一半亮、一半黑</h2>
+
+  <p>先从夜里抬头看得见的东西说起。卫星云图上地球被分成明暗两半，界线大致是个圆；站在地面看，那条界线落在日出与日落的方向上。日出时太阳从东边出来、日落时沉到西边，两次都发生在「光与暗的交界」处，交界的形状却没法走近了看。</p>
+
+  <p>这条界线在汉语里有个成对的叫法：地球自转让它相对地面自东向西移过，一个地方从夜半球进入昼半球时路过的那半段叫<b>晨线</b>，从昼半球进入夜半球时路过的另一半叫<b>昏线</b>；两半合起来，作为昼半球与夜半球的分界线，写作<b>晨昏线</b>。它是一条首尾相接的闭合曲线，所以完整的名字也是<b>晨昏圈</b>。</p>
+
+  <p>形状这件事在球面上不好凭直觉判断。绕地球看一圈，它既像圆又像弧；沿它走一段，脚下又是平的。要弄清它到底是什么，得把它所在的几何对象找出来——先给一个能被检验的结论，再证明它。</p>
+
+  <p>本节要证明的是两句话：</p>
+
+  <ul>
+    <li>晨昏圈是<b>过地心的大圆</b>；</li>
+    <li>晨昏圈<b>垂直于太阳光线</b>。</li>
+  </ul>
+
+  <p>这两句话定下它的形状与朝向，也顺带定出昼夜两半的大小关系；它们与各条纬线、经线的交点，则是后面算昼长、算地方时的直接输入。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "① 晨线与昏线各自的判据是什么？\n② 两半合起来叫什么？它是什么形状？\n③ 晨线上的一点，该往哪一侧去找夜半球？",
+    "answer": "① 地球自转让这条界线相对地面\n自东向西移过：\n一个地方从夜半球进入昼半球时\n路过的那半段是晨线，\n从昼半球进入夜半球时路过的另一半是昏线。\n\n② 两半合起来是昼半球与夜半球的分界线，\n写作晨昏线；它首尾相接，\n完整的名字是晨昏圈。\n\n③ 晨线是「由夜入昼」那一段，\n所以沿自转方向跨过晨线就进入昼半球，\n晨线的西侧（还没转到的那一侧）是夜半球。",
+    "criteria": "① 判据落在「从夜半球进入昼半球」与\n「从昼半球进入夜半球」两个方向上：\n只写「早上那条／晚上那条」\n不给方向算部分通过。\n\n② 答出它把昼半球与夜半球分开，\n并指出是首尾相接的闭合曲线（晨昏圈）。\n\n③ 答出晨线两侧的昼夜归属：\n跨过它就由夜入昼，另一侧才是夜半球。\n\n三条都答到算通过；\n② 或 ③ 拿「东边是晨线」\n这类方位句代替判据\n按不通过处理。"
+  },
+  {
+    "q": "卫星云图上，地球被分成明暗两半，\n分界线大致是个圆。\n这个「大致」说明什么？",
+    "opts": [
+      "分界线的形状只是大致像圆，实际是条弧",
+      "云图上的界线受云层影响，看不清真实形状",
+      "它是球面上的一条大圆，云图上只能看到一部分",
+      "它是球面上的小圆，只在特定角度才像圆"
+    ],
+    "ans": 2,
+    "why": "它是过地心的大圆：\n平面过球心，截线就是大圆。\n从侧看只看到它的一半，加上云层遮挡，\n云图上才显得只是「大致」是个圆。"
+  }
+]'></div>
+
+  <h2>分界线藏在哪个平面上</h2>
+
+  <p>证明从「阳光是什么样的一束光」开始。日地距离约一亿五千万千米，地球半径约六千四百千米，两者相差约两万三千倍：从太阳射到地球上的光，可以看成一束<b>方向一致的平行光</b>。</p>
+
+  <p>设地心为 <span class="math-inline">O</span>，阳光的方向为 <span class="math-inline">\vec{u}</span>。作一个特殊的平面：<b>过地心 <span class="math-inline">O</span> 且垂直于 <span class="math-inline">\vec{u}</span> 的平面</b>，记作 <span class="math-inline">\Pi</span>。这个平面把空间分成两侧——朝太阳的一侧与背太阳的一侧。</p>
+
+  <p>现在看球面上任意一点 <span class="math-inline">P</span>：</p>
+
+  <ul>
+    <li>若 <span class="math-inline">P</span> 在朝太阳的一侧，阳光能照到它，它属于<b>昼半球</b>；</li>
+    <li>若 <span class="math-inline">P</span> 在背太阳的一侧，阳光被地球自身挡住，它属于<b>夜半球</b>；</li>
+    <li>若 <span class="math-inline">P</span> 恰好在 <span class="math-inline">\Pi</span> 上，阳光沿它的<b>切平面</b>掠过，它处在两半球的分界上。</li>
+  </ul>
+
+  <p>于是分界线的位置有了一句话的刻画：<b>太阳光线与地球表面相切的所有点构成的集合</b>。写起来是一个向量条件——点 <span class="math-inline">P</span> 到地心的方向 <span class="math-inline">\vec{OP}</span> 与阳光方向 <span class="math-inline">\vec{u}</span> 的内积为零：</p>
+
+  <div class="math-block">\vec{OP}\cdot\vec{u}=0</div>
+
+  <p>这里的 <span class="math-inline">\vec{u}</span> 是长度为一个单位的向量。由于太阳射来的光方向处处相同，分界线上每一点的 <span class="math-inline">\vec{OP}</span> 与同一个 <span class="math-inline">\vec{u}</span> 的内积都是零，因此这些点满足同一个一次方程——它们共面。</p>
+
+  <p>把这三条并排放，结论就出来了：</p>
+
+  <table>
+    <thead>
+      <tr><th>观察到的性质</th><th>对应的几何事实</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>分界线上每个点都与阳光方向成 <span class="math-inline">90^\circ</span></td><td>这些点全在过 <span class="math-inline">O</span> 且垂直于 <span class="math-inline">\vec{u}</span> 的平面 <span class="math-inline">\Pi</span> 上</td></tr>
+      <tr><td><span class="math-inline">\Pi</span> 过地心 <span class="math-inline">O</span></td><td>把 <span class="math-inline">\vec{OP}=\vec{0}</span> 代入 <span class="math-inline">\vec{OP}\cdot\vec{u}=0</span> 成立，故 <span class="math-inline">O</span> 也在 <span class="math-inline">\Pi</span> 上</td></tr>
+      <tr><td>过球心的平面截球面</td><td>截线是以球心为圆心、半径等于球半径的圆，即<b>大圆</b></td></tr>
+    </tbody>
+  </table>
+
+  <p>于是晨昏圈与平面 <span class="math-inline">\Pi</span> 的截线是同一条线：它过地心，是一条大圆，所在的平面垂直于太阳光线。过球心的大圆正好把球面分成两个全等的半球——这就是「昼夜两半球一样大」的来历。</p>
+
+  <figure class="lesson-figure lesson-figure--inline" role="img" aria-label="侧视地球：三条平行的阳光自右向左射来，晨昏圈所在的平面过地心、垂直于阳光；左半是背光的夜半球，右半是受光的昼半球">
+<svg viewBox="0 0 620 400" role="img" aria-hidden="true" font-family="sans-serif">
+  <!-- 硬几何（由 .stage/learning-coach-0004-terminator/figs_layout2.py 算出并逐项校验）：
+       视线沿 −y，屏幕(u, v) = (190 + 88·x, 186 − 88·z)，阳光方向 (1,0,0) 平行于画面。
+       晨昏圈所在平面 x = 0 → 投影为竖直直线 u = 190，与轮廓圆交于北极(190,98)、南极(190,274)。
+       北极处的直角符号取「阳光 (1,0,0)」与「晨昏圈在该处的切线 (0,1,0)」：
+       两线夹角 = ∠((1,0,0),(0,1,0)) = 90.000000°，且两条线都画在画面内。
+       注意：真正的晨昏圈是球面上的大圆，本视角下投影成这条竖直直线。
+       配色纪律：深色填充上的字用 #f2f6ff / #f0c060，纸面上的字用 #7f5410（不用 currentColor）。 -->
+  <!-- 夜半球：x < 0 的一侧 = 画面左半圆 -->
+  <path d="M 190 98 A 88 88 0 0 0 190 274 A 88 88 0 0 0 190 98 Z"
+        fill="#1b2a4a" opacity="0.9"/>
+  <!-- 赤道直径 -->
+  <line x1="102" y1="186" x2="278" y2="186" stroke="#f0c060" stroke-width="1.3"
+        stroke-dasharray="7 4"/>
+  <!-- 晨昏线（晨昏圈所在平面与画面的交线）与地轴 -->
+  <line x1="190" y1="98" x2="190" y2="274" stroke="#f0c060" stroke-width="2.4"/>
+  <line x1="190" y1="92" x2="190" y2="280" stroke="#8c94a6" stroke-width="1.1"
+        stroke-dasharray="7 5"/>
+  <!-- 北极处的直角符号：阳光方向 ⊥ 晨昏圈在该处的切线 -->
+  <path d="M 190 122 L 190 98 L 214 98" fill="none" stroke="#f0c060" stroke-width="1.6"/>
+  <!-- 三条平行阳光（自右向左，末端落在晨昏线上） -->
+  <line x1="470" y1="140" x2="190" y2="140" stroke="#f0c060" stroke-width="2.2"/>
+  <line x1="470" y1="186" x2="190" y2="186" stroke="#f0c060" stroke-width="2.2"/>
+  <line x1="470" y1="232" x2="190" y2="232" stroke="#f0c060" stroke-width="2.2"/>
+  <path d="M 190 140 L 206 132.5 L 206 147.5 Z" fill="#f0c060"/>
+  <path d="M 190 186 L 206 178.5 L 206 193.5 Z" fill="#f0c060"/>
+  <path d="M 190 232 L 206 224.5 L 206 239.5 Z" fill="#f0c060"/>
+  <!-- 关键点 -->
+  <circle cx="190" cy="98" r="3.8" fill="#f0c060"/>
+  <circle cx="190" cy="274" r="3.8" fill="#f0c060"/>
+  <circle cx="190" cy="186" r="4" fill="#f0c060"/>
+  <circle cx="278" cy="186" r="3.8" fill="#f0c060"/>
+  <!-- 文字：纸面上的（金色） -->
+  <text x="250" y="62" font-size="15" text-anchor="middle" fill="#7f5410">晨昏圈所在平面过地心，且垂直于阳光</text>
+  <text x="250" y="356" font-size="15" text-anchor="middle" fill="#7f5410">地球被分成昼夜两个半球</text>
+  <text x="470" y="108" font-size="15" text-anchor="end" fill="#7f5410">平行的阳光</text>
+  <text x="238" y="96" font-size="15" fill="#7f5410">90°</text>
+  <text x="186" y="322" font-size="15" text-anchor="end" fill="#7f5410">地心 O</text>
+  <text x="282" y="206" font-size="15" fill="#7f5410">赤道</text>
+  <!-- 文字：深色填充里的（浅色） -->
+  <text x="182" y="106" font-size="15" text-anchor="end" fill="#f2f6ff">北极</text>
+  <text x="186" y="246" font-size="15" text-anchor="end" fill="#f2f6ff">南极</text>
+</svg>
+    <figcaption>图 1 · 阳光方向平行于画面时的形状：竖直的直线是晨昏圈<b>所在的平面</b>与画面相交的那条线，它过地心、与阳光成 90°（北极处的直角符号）；左半是背光的夜半球，右半是受光的昼半球</figcaption>
+  </figure>
+
+  <div class="lesson-tip">
+    <b>图上那条直线与真正的晨昏圈</b>
+    <p>图上竖直的那条直线，是晨昏圈<b>所在的平面</b>与画面的交线；真正的晨昏圈是球面上那条大圆。这个视角下大圆投影成了直线，看上去与地球自转轴重合。看这类图时，眼睛只能看形状，判断要靠角度和弧长算出来。</p>
+  </div>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "一位同学的证明：\n\n「我们从侧面看地球，\n明暗交界是一条竖直的直线，\n而且它把地球分成左右两半。\n它正好是地球的对称轴，所以它一定过地心；\n一条过地心又落在球面上的线，就是大圆。」\n\n① 第一步「从侧面看\n是一条竖直的直线」错在哪？\n② 结论本身对吗？对的话，缺的是哪一步？\n③ 请补一条能服人的依据。",
+    "answer": "① 从侧面看到的竖直直线，\n是晨昏圈所在的平面与画面的交线，\n不是晨昏圈本身。\n大圆在这个视角下投影成直线，\n是视角造成的，\n从形状读不出它的性质。\n\n② 结论是对的，但缺了关键一步：\n「分界线所在的平面过地心」。\n\n③ 依据分两步。\n第一步：日地距离约为地球半径的\n两万三千倍，\n阳光可以看成一束方向一致的平行光；\n分界线上每一点与阳光方向成 $90°$，\n而阳光方向处处相同，\n所以这些点满足同一个一次方程——它们共面，\n所在的平面记作 $\\Pi$，且垂直于阳光。\n第二步：把 $\\vec{OP} = \\vec{0}$ 代入 $\\vec{OP} \\cdot \\vec{u} = 0$ 也成立，\n所以地心 $O$ 就在 $\\Pi$ 上。\n过球心的平面截球面，截线是以球心为圆心、\n半径等于球半径的大圆。",
+    "criteria": "① 指出那条直线是「平面与画面的交线」，\n不是晨昏圈本身；\n并说清大圆投影成直线是视角造成的。\n只答「直线不能是圆」算部分通过。\n\n② 答出结论正确、\n缺的是「平面过地心」这一步。\n\n③ 补出两条依据：\n阳光并行故分界线上各点\n与阳光成 $90°$（共面），\n再显式验证 $O$ 满足该方程（面过地心）；\n进而用过球心的平面截球面得大圆收尾。\n\n三条都答到算通过；\n③ 只写「因为对称」\n而不给 $O$ 满足方程这条依据\n按部分通过。"
+  },
+  {
+    "q": "把「晨昏圈是过地心的大圆」这一步证完，\n要依次用上哪三件事？",
+    "opts": [
+      "阳光并行、分界线上各点与阳光成 $90°$、平面过地心",
+      "阳光平行、地球自转、地球公转轨道是个椭圆",
+      "地球自转、分界线是闭合曲线、地球是个球体",
+      "分界线上各点与阳光成 $90°$、地球自转、极圈的定义"
+    ],
+    "ans": 0,
+    "why": "阳光可以看成平行光，\n分界线上每点与阳光成 $90°$，\n这些点满足同一个一次方程（共面）；\n再验证地心也在那个平面上，\n过球心的平面截球面就得大圆。"
+  }
+]'></div>
+
+  <h2>它与各条纬线怎么交</h2>
+
+  <p>形状定下来之后，接下来定位置。地图上把地球梳成两组线：一组是与赤道平行的小圆，叫<b>纬线</b>；一组是从两极出发、在地球表面画到对面极点的半圆，叫<b>经线</b>。晨昏圈与这两组线的交点，分别是后面算昼长与算地方时的入口。</p>
+
+  <p>先看纬线。它与每条纬圈都交于两点（把极点除外）：这两点把整条纬线分成两段，落在昼半球里的那段是<b>昼弧</b>，落在夜半球里的那段是<b>夜弧</b>。地球每小时转过 <span class="math-inline">15^\circ</span>，所以昼弧的圆心角除以 <span class="math-inline">15^\circ</span> 就是这一天的昼长——这一课不展开算，只把交点定出来。</p>
+
+  <p>接下来算这两个交点落在哪。经度从太阳直射点所在的经线起算，记作 <span class="math-inline">\lambda</span>；太阳直射点的纬度（太阳赤纬）记作 <span class="math-inline">\delta</span>，取北半球为正。要把纬线分成两半的那一点，既在纬线 <span class="math-inline">\varphi</span> 上、又在晨昏圈上，代入平面方程得到</p>
+
+  <div class="math-block">\cos\varphi\cos\lambda\cos\delta+\sin\varphi\sin\delta=0</div>
+
+  <p>两边同除 <span class="math-inline">\cos\varphi\cos\delta</span>，并注意昼弧两侧的经度是对称的，就得到交点与正午经线的经度差 <span class="math-inline">H_0</span>：</p>
+
+  <div class="math-block">\cos H_0=-\tan\varphi\,\tan\delta</div>
+
+  <p>这个式子把「交点在哪」变成了一次数值计算。以夏至为例，<span class="math-inline">\delta=23^\circ26'</span>：</p>
+
+  <table>
+    <thead>
+      <tr><th>纬　度</th><th><span class="math-inline">\cos H_0</span></th><th><span class="math-inline">H_0</span></th><th>昼弧</th><th>昼长</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>赤道 <span class="math-inline">0^\circ</span></td><td><span class="math-inline">0</span></td><td><span class="math-inline">90^\circ</span></td><td><span class="math-inline">180^\circ</span></td><td>12 小时 00 分</td></tr>
+      <tr><td>北回归线 <span class="math-inline">23^\circ26'N</span></td><td><span class="math-inline">-0.188</span></td><td><span class="math-inline">100.83^\circ</span></td><td><span class="math-inline">201.7^\circ</span></td><td>13 小时 27 分</td></tr>
+      <tr><td>无锡 <span class="math-inline">31.5^\circ N</span></td><td><span class="math-inline">-0.266</span></td><td><span class="math-inline">105.40^\circ</span></td><td><span class="math-inline">210.8^\circ</span></td><td>14 小时 03 分</td></tr>
+      <tr><td><span class="math-inline">50^\circ N</span></td><td><span class="math-inline">-0.517</span></td><td><span class="math-inline">121.10^\circ</span></td><td><span class="math-inline">242.2^\circ</span></td><td>16 小时 09 分</td></tr>
+      <tr><td><span class="math-inline">60^\circ N</span></td><td><span class="math-inline">-0.751</span></td><td><span class="math-inline">138.65^\circ</span></td><td><span class="math-inline">277.3^\circ</span></td><td>18 小时 29 分</td></tr>
+      <tr><td>北极圈 <span class="math-inline">66^\circ34'N</span></td><td><span class="math-inline">-1.000</span></td><td><span class="math-inline">180^\circ</span></td><td><span class="math-inline">360^\circ</span></td><td>24 小时 00 分</td></tr>
+      <tr><td><span class="math-inline">70^\circ N</span></td><td><span class="math-inline">-1.021</span></td><td>无解</td><td><span class="math-inline">360^\circ</span></td><td>极昼</td></tr>
+    </tbody>
+  </table>
+
+  <p>三行值得单独看：</p>
+
+  <ul>
+    <li><b>赤道那一行</b>：<span class="math-inline">\tan 0^\circ=0</span>，所以 <span class="math-inline">\cos H_0=0</span>、<span class="math-inline">H_0</span> 恒为 <span class="math-inline">90^\circ</span>，昼弧恒为 <span class="math-inline">180^\circ</span>。无论直射点在哪，赤道上昼夜总是等长。</li>
+    <li><b><span class="math-inline">66^\circ34'N</span> 那一行</b>：<span class="math-inline">\cos H_0=-1</span>，昼弧正好是一整圈，昼弧与夜弧在这里不再可分。让 <span class="math-inline">\cos H_0</span> 落到 <span class="math-inline">-1</span> 的那个纬度，就是极圈。</li>
+    <li><b><span class="math-inline">70^\circ N</span> 那一行</b>：<span class="math-inline">\cos H_0</span> 的绝对值已经大于 <span class="math-inline">1</span>。余弦取不到这样的值，说明这条纬线与晨昏圈根本不相交——整条纬线都在昼半球里。这就是<b>极昼</b>。<span class="math-inline">\delta</span> 为负时同理，南极圈以南出现极昼、北极圈以北出现极夜。</li>
+  </ul>
+
+  <p>「极圈的纬度是多少」这个问题，从中间那一行直接读出来。令 <span class="math-inline">\tan\varphi\,\tan\delta=1</span>，得</p>
+
+  <div class="math-block">\varphi=90^\circ-|\delta|</div>
+
+  <p>夏至 <span class="math-inline">\delta=23^\circ26'</span>，于是 <span class="math-inline">\varphi=66^\circ34'</span>。极圈的纬度不是另外规定的数，它是「晨昏圈还与纬线相交」这件事的边界。</p>
+
+  <figure class="lesson-figure lesson-figure--inline" role="img" aria-label="北极上空的俯视图：晨昏线是一条过地心的竖直直径，把赤道圈分成左右两半；极圈与晨昏线相切，切点以北整圈都在昼半球里（极昼）">
+<svg viewBox="0 0 640 480" role="img" aria-hidden="true" font-family="sans-serif">
+  <!-- 硬几何（figs_layout2.py 算出并逐项校验）：
+       屏幕(u, v) = (255 + 112·x, 220 − 112·y)，x 轴指向太阳直射点所在经线。
+       晨昏圈所在平面 x = 0 → 投影为竖直直线 u = 255（一条过地心的直径）。
+       昼侧判据 u > 255；赤道上的两个交点即地方时 18 时（255,108）与 6 时（255,332）。
+       极圈半径 = R·sinδ = 44.540，与晨昏线相切于 (210.46, 220)（极圈的午夜点）；
+       该点代入晨昏圈平面方程 u·P = 0，残差 0.00e+00。
+       30°N 纬圈 r = 96.995，两交点 (230.73,126.09) 与 (230.73,313.91)，
+       昼弧 208.98°、夜弧 151.02°；两交点均满足 u·P = 0（已核）。
+       配色纪律同图 1。 -->
+  <!-- 夜半球：u < 255 的左半圆 -->
+  <path d="M 255 332 A 112 112 0 0 0 255 108 A 112 112 0 0 0 255 332 Z"
+        fill="#1b2a4a" opacity="0.9"/>
+  <!-- 12 条经线（自地心径向） -->
+  <g stroke="#8c94a6" stroke-width="1.1" opacity="0.9">
+    <line x1="255" y1="220" x2="367" y2="220"/>
+    <line x1="255" y1="220" x2="351.99" y2="164.00"/>
+    <line x1="255" y1="220" x2="311.00" y2="123.01"/>
+    <line x1="255" y1="220" x2="255" y2="108"/>
+    <line x1="255" y1="220" x2="199.00" y2="123.01"/>
+    <line x1="255" y1="220" x2="158.01" y2="164.00"/>
+    <line x1="255" y1="220" x2="143" y2="220"/>
+    <line x1="255" y1="220" x2="158.01" y2="276.00"/>
+    <line x1="255" y1="220" x2="199.00" y2="316.99"/>
+    <line x1="255" y1="220" x2="255" y2="332"/>
+    <line x1="255" y1="220" x2="311.00" y2="316.99"/>
+    <line x1="255" y1="220" x2="351.99" y2="276.00"/>
+  </g>
+  <!-- 30°N 纬圈：夜弧与昼弧 -->
+  <path d="M 230.73 313.91 A 96.995 96.995 0 0 0 230.73 126.09"
+        fill="none" stroke="#e08a2e" stroke-width="3.6"/>
+  <path d="M 230.73 126.09 A 96.995 96.995 0 0 1 230.73 313.91"
+        fill="none" stroke="#ffd479" stroke-width="3.6"/>
+  <!-- 赤道圈与极圈 -->
+  <circle cx="255" cy="220" r="112" fill="none" stroke="#f0c060" stroke-width="2"/>
+  <circle cx="255" cy="220" r="44.54" fill="none" stroke="#f0c060" stroke-width="1.6"
+          stroke-dasharray="7 4"/>
+  <!-- 晨昏线：一条过地心的竖直直径 -->
+  <line x1="255" y1="108" x2="255" y2="332" stroke="#f0c060" stroke-width="3"/>
+  <!-- 三条平行阳光（自右向左，末端停在晨昏线上） -->
+  <g stroke="#f0c060" stroke-width="2.2">
+    <line x1="610" y1="152" x2="255" y2="152"/>
+    <line x1="610" y1="220" x2="255" y2="220"/>
+    <line x1="610" y1="288" x2="255" y2="288"/>
+  </g>
+  <path d="M 255 152 L 271 144.5 L 271 159.5 Z" fill="#f0c060"/>
+  <path d="M 255 220 L 271 212.5 L 271 227.5 Z" fill="#f0c060"/>
+  <path d="M 255 288 L 271 280.5 L 271 295.5 Z" fill="#f0c060"/>
+  <!-- 关键点 -->
+  <circle cx="255" cy="220" r="4" fill="#f0c060"/>
+  <circle cx="357.76" cy="220" r="5" fill="#ff9f43"/>
+  <circle cx="210.46" cy="220" r="4.4" fill="#ff9f43"/>
+  <circle cx="255" cy="108" r="3.4" fill="#f0c060"/>
+  <circle cx="255" cy="332" r="3.4" fill="#f0c060"/>
+  <!-- 文字：纸面上的（金色） -->
+  <text x="243" y="96" font-size="15" text-anchor="end" fill="#7f5410">晨昏线</text>
+  <text x="300" y="132" font-size="15" fill="#7f5410">地方时 18 时处</text>
+  <text x="269" y="356" font-size="15" fill="#7f5410">地方时 6 时处</text>
+  <text x="88" y="336" font-size="15" fill="#7f5410">地心 O（晨昏线过地心）</text>
+  <text x="370" y="212" font-size="15" fill="#7f5410">太阳直射点</text>
+  <text x="66" y="216" font-size="15" fill="#7f5410">极圈与晨昏线相切</text>
+  <text x="30" y="238" font-size="15" fill="#7f5410">切点以北为极昼</text>
+  <text x="610" y="92" font-size="15" text-anchor="end" fill="#7f5410">平行的阳光</text>
+  <text x="255" y="404" font-size="15" text-anchor="middle" fill="#7f5410">昼夜半球相等，晨昏线垂直于阳光</text>
+  <!-- 文字：深色填充里的（浅色） -->
+  <text x="232" y="258" font-size="15" text-anchor="middle" fill="#f2f6ff">夜半球</text>
+  
+</svg>
+    <figcaption>图 2 · 自北极上空俯视（夏至）：晨昏线是一条过地心的直径，把球面分成左右两个相等的半球；它与极圈相切于一点，切点以北整圈都在昼半球里，这就是极昼的开始</figcaption>
+  </figure>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "夏至（$\\delta = 23°26′$）的昼长表：\n\n```text\n纬度          昼弧      昼长\n0°            180.0°    12h00m\n23°26&#39;N       201.7°    13h27m\n31.5&#39;N        210.8°    14h03m\n50°N          242.2°    16h09m\n66°34&#39;N       360.0°    24h00m\n```\n\n① 昼弧除以 $15°$ 是什么意思？\n② 由 23°26′N 与 50°N 两行的昼长，\n各求当地日出时刻。",
+    "answer": "① 地球每小时转过 $15°$，\n所以昼弧（圆心角）除以 $15°$\n就是这一天的昼长。\n\n② 日出与日落关于正午对称，\n所以日出时刻等于正午减去半个昼长。\n\n23°26′N：$13$ 时 $27$ 分的一半\n是 $6$ 时 $43.5$ 分，\n$12$ 时减去它得 $5$ 时 $16.5$ 分，\n日出约在地方时 $5$ 时 $17$ 分。\n\n50°N：$16$ 时 $09$ 分的一半是 $8$ 时 $4.5$ 分，\n$12$ 时减去它得 $3$ 时 $55.5$ 分，\n日出约在地方时 $3$ 时 $56$ 分。",
+    "criteria": "① 答出每小时 $15°$，\n昼弧折成小时即昼长。\n\n② 用「正午减去半个昼长」求出两次日出：\n23°26′N 约 $5$ 时 $17$ 分、\n50°N 约 $3$ 时 $56$ 分\n（各允许差 2 分钟）。\n\n两问都答到算通过；\n② 若把昼长的一半加在 12 时上\n（得到日落）算不通过；\n只算对一个纬度算部分通过。"
+  },
+  {
+    "q": "同一条纬线，晨昏圈与它交于两点。\n这两点把纬线分成昼弧与夜弧。\n\n① 昼长 $24$ 小时的是哪条纬线？为什么？\n② 二至日与二分日相比，\n同一纬线上的昼弧变长还是变短？",
+    "opts": [
+      "北极圈；该纬线上全天各点都落在昼半球",
+      "北回归线；夏至那天太阳正好直射到它上面",
+      "赤道；赤道上不受直射点纬度的影响",
+      "南回归线；夏至那天它整条圈都落在夜半球"
+    ],
+    "ans": 0,
+    "why": "昼长 24 小时就是极昼：\n该纬线与晨昏圈相切（或完全不相交），\n整条纬圈都落在昼半球里。\n夏至的这条纬线是北极圈 $66°34′N$。"
+  }
+]'></div>
+
+  <h2>它与各条经线怎么交</h2>
+
+  <p>纬线那一组给出了昼弧，经线这一组给出时刻。</p>
+
+  <p>经线是地球表面从北极到南极的半圆，每条经线都过两极。晨昏圈与每条经线交于两点——它同样把每条经线分成两段，一段在昼半球、一段在夜半球。哪里是交点，用同一个平面方程就能解出来。</p>
+
+  <p>只看赤道：<span class="math-inline">\varphi=0</span>，<span class="math-inline">\tan 0^\circ=0</span>，于是 <span class="math-inline">\cos H_0=0</span>、<span class="math-inline">H_0=90^\circ</span>。赤道上那两个交点与正午经线正好差 <span class="math-inline">90^\circ</span>，按每小时 <span class="math-inline">15^\circ</span> 折算，就是正午前后各 6 小时——<b>地方时 6 时与 18 时</b>。用上一节已经立起来的换算：经度每差 <span class="math-inline">1^\circ</span>，地方时差 4 分钟，而 <span class="math-inline">90^\circ</span> 折合 6 小时整。</p>
+
+  <p>由此得到一条可以直接用的事实：<b>在任一时刻，晨昏圈与赤道的两个交点分别落在地方时 6 时与 18 时所在的经线上。</b> 日出的具体时刻随季节与纬度变，但「日出发生在地方时 6 时那条经线上」这条关系不变——地方时本身就是按太阳定的，地球转着，那条经线也跟着转，两者始终对齐。</p>
+
+  <p>这条事实换成经度差来读也行：晨昏圈把每条经线分成两半，交点与这条经线自己的正午相差 <span class="math-inline">H_0</span>。赤道上这个差正好是 <span class="math-inline">90^\circ</span>，往两极去它随 <span class="math-inline">\varphi</span> 变化，具体值由 <span class="math-inline">\cos H_0=-\tan\varphi\tan\delta</span> 给出。所以「几点天亮」这个问题的答案，一半来自 <span class="math-inline">\delta</span>、一半来自 <span class="math-inline">\varphi</span>。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "赤道上，晨昏圈的两个交点落在地方时\n$6$ 时与 $18$ 时这两条经线上。\n\n① 这个 $6$ 小时差是怎么算出来的？\n② 若此刻太阳直射的经线是 $120°E$，\n这两条经线各是哪一条？",
+    "answer": "① 赤道上 $\\tan 0° = 0$，\n由 $\\cos H_0 = -\\tan\\varphi\\tan\\delta$ 得 $\\cos H_0 = 0$、\n$H_0 = 90°$。\n经度每差 $15°$ 地方时差 $1$ 小时，\n$90° \\div 15° = 6$ 小时，\n所以两个交点分别落在正午前后各 $6$ 小时，\n即地方时 $6$ 时与 $18$ 时的经线上。\n\n② 直射点所在经线的地方时是正午 $12$ 时。\n$18$ 时比 $12$ 时晚 $6$ 小时，\n在 $120°E$ 以西 $90°$，即 $30°E$；\n$6$ 时比 $12$ 时早 $6$ 小时，\n在 $120°E$ 以东 $90°$，即 $150°W$。",
+    "criteria": "① 给出 $H_0 = 90°$ 与「$15°$ 折 $1$ 小时」，\n算出 $6$ 小时。\n只写「$90°$ 就是 $6$ 小时」\n而不给每小时 $15°$ 算部分通过。\n\n② 两条经线都答对：\n$18$ 时在西侧的 $30°E$、$6$ 时在东侧的 $150°W$。\n\n两问都答到算通过；\n② 东西方向弄反：\n把 $6$ 时放到 $30°E$ 按不通过处理。"
+  },
+  {
+    "q": "「赤道上晨昏圈的两个交点，\n落在地方时 $6$ 时与 $18$ 时的经线上。」\n\n这句里的 $6$ 时，确切说的是什么？",
+    "opts": [
+      "任何纬度上的日出时刻，各地都按地方时 $6$ 时算",
+      "一条经线的地方时，与实际日出不是一回事",
+      "晨线与经线相交的那一刻，只对赤道成立",
+      "日出时刻，无锡夏至日出就是地方时 $6$ 时"
+    ],
+    "ans": 1,
+    "why": "交点在 $6$ 时那条经线上，\n说的是经线的地方时。\n日出的具体时刻也随纬度变：\n无锡夏至的 $H_0$ 是 $105.4°$，\n日出约在 $4$ 时 $58$ 分，\n比 $6$ 时早一个多小时。"
+  }
+]'></div>
+
+  <h2>这条圈跟着谁动</h2>
+
+  <p>最后交代它在时间上的性质。上表里每一行都含 <span class="math-inline">\delta</span>：<span class="math-inline">\delta</span> 变，<span class="math-inline">H_0</span> 就变，昼弧与夜弧的划分跟着变。而 <span class="math-inline">\delta</span> 是随日期往返移动的直射点纬度。所以：</p>
+
+  <ul>
+    <li>一天之内，晨昏圈相对地面<b>自东向西</b>移过，地面上的每一个地方依次穿过它——这就是昼夜交替，周期是自转周期；</li>
+    <li>一年之内，它在球面上的<b>倾角与位置</b>整体摆动，夏至与冬至是两端——这就是昼夜长短的季节变化，周期是公转周期；</li>
+    <li>在任一时刻，它是一条<b>确定的</b>大圆，与某一条纬线相切的那两个切点，就定下当天极昼与极夜的范围。</li>
+  </ul>
+
+  <p>三件事用的都是同一张图，区别只在「把 <span class="math-inline">\delta</span> 看成常数还是变量」。</p>
+
+  <div class="lesson-warn">
+    <b>两个容易弄反的地方</b>
+    <ul>
+      <li><b>「垂直于阳光」说的是晨昏圈所在的平面</b>。这条关系与「晨昏圈和经线的夹角」是两件事：晨昏圈所在的平面与任一条经线所在的平面本来就成 <span class="math-inline">90^\circ</span>；它与赤道面成 <span class="math-inline">90^\circ-|\delta|</span>（夏至 <span class="math-inline">66^\circ34'</span>）。两个角都在这一课里出现了，用的时候要看清楚问的是哪一个。</li>
+      <li><b>6 时与 18 时说的是经线，不是日出时刻</b>。赤道上昼夜等长、日出正好在地方时 6 时；其他纬度不是：<span class="math-inline">\cos H_0=-\tan\varphi\tan\delta</span> 只在 <span class="math-inline">\varphi=0</span> 时给出 <span class="math-inline">H_0=90^\circ</span>。无锡夏至的 <span class="math-inline">H_0</span> 是 <span class="math-inline">105.4^\circ</span>，折合日出在地方时 4 时 58 分左右——比 6 时早一个多小时，差值来自纬度。</li>
+    </ul>
+  </div>
+
+  <div class="lesson-practice">
+    <div class="lesson-practice__head">
+      <span class="lesson-practice__level">练习</span>
+      <span class="lesson-practice__title">第 1 步 · 用灯光把晨昏圈找出来</span>
+    </div>
+
+      <ol>
+        <li>在桌上放一个地球仪，用台灯从侧面照它。灯离地球仪远一些，让照到球面上的光接近平行光。</li>
+        <li>转动地球仪，把地轴摆成与台灯射来的光线垂直（侧着看，地轴竖直、光线水平，就是垂直的）。这时球面上明暗交界的位置最正。</li>
+        <li>慢慢把地轴从竖直方向倾斜约 23.5°，同时保持光线方向不变。明暗交界跟着偏转——偏转的方向与大小，就是黄赤交角给它的。</li>
+      </ol>
+  </div>
+
+  <div class="lesson-practice">
+    <div class="lesson-practice__head">
+      <span class="lesson-practice__level">练习</span>
+      <span class="lesson-practice__title">第 2 步 · 用橡皮筋把这条圈套出来</span>
+    </div>
+
+      <ol>
+        <li>保持上一步最后的姿态不动，拿一根橡皮筋套在地球仪上，调整到与明暗交界完全重合。橡皮筋会自己滑到大圆的位置：从北极一侧看，它是一条过两极的圈。</li>
+        <li>核对它是大圆：量一量北极点到橡皮筋的最短距离、南极点同样的距离，两者应该相等；把橡皮筋往里压，它就不再与明暗交界重合。</li>
+        <li>把橡皮筋与地球仪上的一条纬线（比如北纬 30°）的两个交点用记号笔点出来，记下这两点之间的弧长占整圈的多少——这就是当地昼弧与夜弧的划分。</li>
+      </ol>
+  </div>
+
+  <div class="lesson-practice">
+    <div class="lesson-practice__head">
+      <span class="lesson-practice__level">练习</span>
+      <span class="lesson-practice__title">第 3 步 · 读它与经线的交点</span>
+    </div>
+
+      <ol>
+        <li>在球面上找那条与晨昏圈正交、且过两极的经线圈，读出它与晨昏圈的两个交点各在什么经度上。</li>
+        <li>查地球仪上与明暗交界相交的那半圈经线：交点落在昼半球的一侧还是夜半球的一侧？按上一节的换算，这一侧对应几点的位置。</li>
+        <li>把橡皮筋稍微挪一个很小的角度（相当于日期挪一天），再看那两个交点的经度挪了多少。能在两分钟之内看出这个变化，就说明「晨昏圈随直射点移动」这件事已经抓住了。</li>
+      </ol>
+  </div>
+
+  <ul class="lesson-resources">
+    <li><a href="https://basic.smartedu.cn/tchMaterial">人教版《选择性必修一》第一章 地球的运动</a><span class="lesson-resources__meta">教材基准 · 本章范围：第一节 地球的自转和公转、第二节 地球运动的地理意义；本节属第二节</span></li>
+    <li><a href="https://www.hko.gov.hk/tc/gts/astron2026/files/2026SolarTerms24.pdf">香港天文台年曆 2026 · 二十四節氣</a><span class="lesson-resources__meta">官方数据 · 各中气的太阳直射点纬度圈（春分赤道、夏至北回归线、冬至南回归线）与日出／上中天／日落方位</span></li>
+    <li><a href="https://www.hko.gov.hk/tc/gts/astronomy/Sun_Transit.htm">香港天文台 · 日上中天的時間、方位及仰角</a><span class="lesson-resources__meta">核对来源 · 逐日的上中天时刻与仰角，用来核对一地一日的正午</span></li>
+    <li><a href="https://my.weather.gov.hk/tc/gts/astronomy/SunPathDay3_ue.htm">互動版太陽路徑圖</a><span class="lesson-resources__meta">官方工具 · 输入日期与经纬度，看当日太阳路径；页面里昼夜用底色区分，可以直接对照本节定下的分界</span></li>
+  </ul>
+
+  <div class="lesson-related">
+    <a href="0003-obliquity.seasons.html">上节课：黄赤交角与四季</a>
+    <a href="0005-spherical.triangles.html">下节课：球面上的三角形</a>
+  </div>
+
+  <!-- ── 提问提示：固定写法，别删 ── -->
+
+  <div class="lesson-ask">
+    <b>没看懂？随时问</b>
+    把看不懂的段落（或报错）原样复制回会话，说一句哪里不懂就行，我只解释这一段，不打断你的进度。
+  </div>
+
+  <!-- ── 上/下节课指针由渲染器按 curriculum.yaml 的 nodes 顺序算（第一课无 --prev、最后一课无 --next） ── -->
+
+  <nav class="lesson-nav" aria-label="上一课 / 下一课">
+    <a class="lesson-nav__link lesson-nav__link--prev" href="0003-obliquity.seasons.html">
+      <span class="lesson-nav__dir">上节课</span>
+      <span class="lesson-nav__title">黄赤交角与四季</span>
+    </a>
+    <a class="lesson-nav__link lesson-nav__link--next" href="0005-spherical.triangles.html">
+      <span class="lesson-nav__dir">下节课</span>
+      <span class="lesson-nav__title">球面上的三角形</span>
+    </a>
+  </nav>
+
+  <footer class="lesson-footer">
+    StudyMate · 0004 晨昏圈是条大圆 · 本地学习工作区
+  </footer>
+
+</article>
+
+<script src="../../../assets/sayo/sayo.js"></script>
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<script src="../../../assets/katex/katex.min.js" defer></script>
+<script src="../../../assets/lesson-math.js" defer></script>
+<script src="../assets/quiz.js" defer></script>
+<script src="../assets/lesson-toc.js" defer></script>
+<script>LearnTheme.wire(document.getElementById('lesson-theme-checkbox'));</script>
+</body>
+</html>

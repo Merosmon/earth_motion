@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>正午的影子 · 地球运动（高中地理·人教版选择性必修一）</title>
+
+<!-- 共享层在 learning/assets/，课件在 learning/subjects/<slug>/lessons/ 下，所以是 ../../../assets/ -->
+<link rel="stylesheet" href="../../../assets/sayo/sayo.css">
+<link rel="stylesheet" href="../../../assets/learn-theme.css">
+<link rel="stylesheet" href="../assets/style.css">
+
+<!-- 主题要在首帧前应用，避免闪白/闪黑 -->
+<script src="../../../assets/learn-theme.js"></script>
+<script>LearnTheme.apply();</script>
+</head>
+
+<body class="lesson-body">
+
+<nav class="lesson-bar">
+  <a href="../index.html">← 返回课程</a>
+  <span>地球运动（高中地理·人教版选择性必修一）</span>
+  <span class="lesson-bar__no">0001</span>
+  <!-- 课件页自带主题开关：学生从文件管理器直接打开课件时也能切暗色 -->
+  <label class="syo-toggle syo-toggle--theme lesson-bar__toggle" title="切换深浅主题" aria-label="切换深浅主题">
+    <input type="checkbox" id="lesson-theme-checkbox" checked>
+    <span class="syo-toggle-track"></span>
+    <span class="syo-toggle-knob">
+      <svg class="syo-toggle-sun" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="3.5" stroke="#f57c00" stroke-width="1.5"/><path d="M10 2v2.5M10 15.5V18M2 10h2.5M15.5 10H18M4.34 4.34l1.77 1.77M13.89 13.89l1.77 1.77M4.34 15.66l1.77-1.77M13.89 6.11l1.77-1.77" stroke="#f57c00" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg class="syo-toggle-moon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.5 12.5A6 6 0 019 4.5a6 6 0 007.5 8z" stroke="#5c6bc0" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </span>
+  </label>
+</nav>
+
+<article class="lesson">
+
+  <header class="lesson-header">
+    <span class="lesson-header__eyebrow">0001 · 正午的影子</span>
+    <h1>正午的影子</h1>
+    <p class="lesson-goal"><b>本节目标：</b>能把太阳在天空中的位置用角度表示出来，由影长算出正午太阳高度，并说清无锡的正午影长为什么在一年里从约 0.14 米变到约 1.4 米——这一章结束时，同一根竿的正午影子要能按任意日期算出来。</p>
+  </header>
+
+  <!-- ── 正文：渲染器按内容文件（lessons/<序号>-<节点id>.md）产出，块词汇见 docs/规范/课件内容格式.md ── -->
+
+  <div class="lesson-note">
+    <b>这一节在整章里的位置</b>
+    <p>这是第一章的第一节。整章结束时，要拿一根竿的正午影子把一年算出来；这一节先把「影子为什么随季节变」这个问题问清楚，再把「正午」这两个字立起来。</p>
+  </div>
+
+  <h2>同一根竿，两种影子</h2>
+
+  <p>靠影子判时刻的做法比钟表早得多。太阳每天从东方升起、正午前后越过南北方向的那条线、再从西方落下，竿影随之由长变短、再变长，方向也跟着转，古人把竿影落在刻度上的位置读成时刻，这就是日晷。影子是可以直接看的，所以它比任何解释都更早被人注意到。</p>
+
+  <p>一年之内，中午的影子并不是同一种影子。夏至这天中午，一米高的竿影子只有十几厘米，踩在墙根；冬至这天中午，同一根竿影子能拖到一米四以上，铺出大半个院子。影子长的日子，天冷；影子短的日子，天热。长度差到十倍，方向也跟着换，这件事用「地球在转」这类话是说不清的。</p>
+
+  <p>本节要回答的就是这个问题：同一根竿、同一个时刻（中午），影子凭什么在一年里变长变短、掉头换向。回答它需要三样东西——太阳在天空中的位置怎么量、太阳光垂直照到地面的那一点在哪里、这两者与本地纬度是什么关系。先立起来的是第一样：一个能读数的角度。</p>
+
+  <figure class="lesson-figure lesson-figure--inline" role="img" aria-label="夏至正午与冬至正午，同一根一米直杆的影长对比：82° 时影长 0.14 米，35° 时影长 1.43 米">
+<svg viewBox="0 0 396 302" width="100%" height="302" role="img" aria-hidden="true" font-family="sans-serif">
+  <text x="6" y="46" font-size="13" fill="currentColor">夏至正午</text>
+  <text x="208" y="46" font-size="13" fill="currentColor">冬至正午</text>
+  <line x1="12" y1="228" x2="384" y2="228" stroke="currentColor" stroke-width="1.4"/>
+  <line x1="86" y1="228" x2="74" y2="228" stroke="currentColor" stroke-width="1.2"/>
+  <!-- 这一条就是太阳光线：从影端经竿顶一直延伸到太阳，太阳落在延长线的端点 (50,142) 上 -->
+  <line x1="86" y1="228" x2="50" y2="142" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="34" y1="142" x2="34" y2="228" stroke="currentColor" stroke-width="0.8"/>
+  <text x="24" y="200" font-size="12" text-anchor="end" fill="currentColor">1 m</text>
+  <line x1="74" y1="228" x2="74" y2="142" stroke="currentColor" stroke-width="2"/>
+  <path d="M 100 228 A 26 26 0 0 0 77.62 202.26" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="96" y="211" font-size="12" fill="currentColor">82°</text>
+  <line x1="74" y1="228" x2="86" y2="228" stroke="currentColor" stroke-width="4" opacity="0.45"/>
+  <text x="80" y="272" font-size="11" text-anchor="middle" fill="currentColor">0.14 m</text>
+  <text x="8" y="272" font-size="12" fill="currentColor">影子短</text>
+  <!-- 太阳画在"光线延长线"上：把太阳→竿顶的斜线延长，太阳落在延长线端点。
+       这样太阳**既在光线上、又离竿线 22px 以上**（先前那版把太阳放在光线端旁，
+       学生看到"太阳不在光线上"）。同一光线延伸到影端，即 86,228→74,142 所在直线。 -->
+  <!-- 太阳是**光源**，不是发光体：这四道短线画成"光射来的方向"——从太阳外侧指向太阳
+       （箭头朝内），与斜光线同向，读作"光从这一侧射过来"。
+       先前那版画成从太阳向外的放射状光芒，含义是"太阳在发光"，与本图要讲的
+       "一支光柱以某高度角照到竿上"矛盾，也与第 2 课「平行的阳光」那张图的画法打架。 -->
+  <line x1="50" y1="142" x2="62" y2="142" stroke="currentColor" stroke-width="1.2"/>
+  <circle cx="50" cy="142" r="5" fill="currentColor" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="38" y1="130" x2="43" y2="136" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="38" y1="154" x2="43" y2="148" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="50" y1="125" x2="50" y2="131" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="50" y1="159" x2="50" y2="153" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="337" y1="228" x2="214" y2="228" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="337" y1="228" x2="214" y2="142" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="212" y1="142" x2="216" y2="142" stroke="currentColor" stroke-width="1"/>
+  <line x1="190" y1="142" x2="190" y2="228" stroke="currentColor" stroke-width="0.8"/>
+  <text x="180" y="200" font-size="12" text-anchor="end" fill="currentColor">1 m</text>
+  <line x1="214" y1="228" x2="214" y2="142" stroke="currentColor" stroke-width="2"/>
+  <path d="M 250 228 A 36 36 0 0 0 243.49 207.35" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="193" y="217" font-size="12" fill="currentColor">35°</text>
+  <line x1="214" y1="228" x2="337" y2="228" stroke="currentColor" stroke-width="4" opacity="0.45"/>
+  <text x="276" y="272" font-size="11" text-anchor="middle" fill="currentColor">1.43 m</text>
+  <text x="330" y="272" font-size="12" fill="currentColor">影子长</text>
+  <line x1="214" y1="142" x2="252" y2="200" stroke="currentColor" stroke-width="1.2"/>
+  <circle cx="252" cy="200" r="5" fill="currentColor" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="261" y1="210" x2="256" y2="204" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="263" y1="188" x2="258" y2="194" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="252" y1="219" x2="252" y2="213" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="252" y1="181" x2="252" y2="187" stroke="currentColor" stroke-width="1.2"/>
+  <text x="366" y="216" font-size="11" fill="currentColor">地面</text>
+</svg>
+    <figcaption>图 1 · 无锡地方时正午，同一根一米直杆在夏至与冬至的影子；斜线是从太阳射到竿顶的光线，竿基到影子末端为影长，角上的弧线标出太阳高度</figcaption>
+  </figure>
+
+  <h2>太阳高度怎么量</h2>
+
+  <p>要说明太阳的位置，用两个数就够：一个说它有多高，一个说它在哪个方向。本节先立起来的是前者。</p>
+
+  <p>太阳光线与地平面之间的夹角，称为<b>太阳高度（角）</b>。地平线方向上这个角是 0°，太阳正对头顶时是 90°，太阳落到地平线以下就是负值。正午前后这个角会到一天里的最大值，这个最大值称为<b>正午太阳高度</b>，它只是太阳高度在一日之内的最大值，不是一个新量。</p>
+
+  <p>太阳高度没有刻度可以读，影子却有长度可以量。两者的关系由一个直角三角形给出：把竿当成竖直的直角边，影子是水平的直角边，太阳光线是斜边，太阳高度就是竿顶处光线与地面之间的那个角。于是在太阳高度为 <span class="math-inline">h</span>、竿高为 <span class="math-inline">H</span> 时，影长 <span class="math-inline">L</span> 满足</p>
+
+  <div class="math-block">\tan h = \frac{H}{L} \qquad\text{也就是}\qquad L = \frac{H}{\tan h}</div>
+
+  <p>这个比值的意义在于它把两件事绑在一起：影子有多长，只取决于光线有多斜，与人站得多远、楼房盖得多高都无关。同一根竿，太阳高一点，影子就短一点。</p>
+
+  <ul>
+    <li>光线垂直射向地面时（<span class="math-inline">h = 90°</span>），比值是 0，影子缩到脚下；</li>
+    <li>太阳贴近地平线时（<span class="math-inline">h</span> 接近 0°），比值非常大，影子可以拉到任意长；</li>
+    <li><span class="math-inline">h = 45°</span> 时比值正好是 1，影长与竿高相等。</li>
+  </ul>
+
+  <p>反过来用也可以，而且更常用：量出影长，再除以竿高，得到的就是 <span class="math-inline">\tan h</span>，由它可以反推出太阳有多高——这就是用一根竿测出太阳位置的办法，中文里说的「立竿见影」，量的是这个。</p>
+
+  <p>用无锡夏至的正午试一次。此时正午太阳高度是 81.9°，<span class="math-inline">\tan 81.9° \approx 7.05</span>，一米高的竿影长约为</p>
+
+  <div class="math-block">L = \frac{1}{7.05} \approx 0.14\ \text{米}</div>
+
+  <p>夏至中午的太阳几乎在头顶，影子短到只有十几厘米，比脚还短。这与「影子踩在墙根」的观察对得上。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "某同学算冬至正午影长，1.4 米竹竿\n\n```\nL = H x cos h = 1.4 x cos 35.1° = 1.15 米\n```\n\n他说：冬至正午太阳高度 35.1°\n代入就得到影子 1.15 米。\n错在哪里？",
+    "opts": [
+      "错在用了竿高；影长该由竿高和影长相除",
+      "错在结果；冬至正午影长应短于竿高",
+      "错在把余弦当正切；比值该用竿高除以影长",
+      "错在漏掉日地距离；影长还要按距离改"
+    ],
+    "ans": 2,
+    "why": "竿、影、光线构成直角三角形，比值是正切。"
+  },
+  {
+    "q": "现在把这处错误改过来，并说清判据。\n\n① 写出正确的换算式\n说明竿、影、光线各是哪条边。\n② 算这根 1.4 米竹竿冬至正午的影长\n（$\\tan 35.1° \\approx 0.70$）。\n③ 用夏至数据检验这个式子\n（一米杆、$h = 81.9°$、影长 0.14 米）。\n④ 说明影长为什么与日地距离无关\n要用太阳高度来说明。",
+    "answer": "$\\tan h = H / L$：竿是竖直直角边\n影是水平直角边，光线是斜边。\n太阳高度是竿顶处光线与地面的夹角。\n\n冬至：$L = 1.4 \\div \\tan 35.1°$\n$\\approx 1.4 \\div 0.70 = 2.0$ 米。\n\n夏至检验：$L = 1 \\div \\tan 81.9°$\n$\\approx 1 \\div 7.05 \\approx 0.14$ 米\n与观察到的短影子一致。\n\n用错的余弦时，夏至会算出\n$1 \\div \\cos 81.9° \\approx 7.1$ 米\n比竿高还长七倍，一眼就不对。\n\n日地距离只改变太阳的视大小\n不改变光线与地面的夹角。\n影长只由太阳高度定\n高度只由纬度与直射点纬度定。",
+    "criteria": "① 写出 $\\tan h = H / L$\n或 $L = H / \\tan h$\n并指明竿与影是两条直角边、光线是斜边。\n\n② 冬至影长在 1.9—2.1 米之间\n（这根竿高 1.4 米）。\n\n③ 用夏至或二分数据反算\n结果与课件里的 0.14 米／0.61 米相符；\n答出用错的余弦在夏至会得到 7 米量级。\n\n④ 说清影长只取决于太阳高度\n与日地距离无关。\n\n四条都答到算通过；\n只抄公式没做 ② 或 ③ 的算部分通过。"
+  }
+]'></div>
+
+  <h2>直射点定在哪</h2>
+
+  <p>光有太阳高度还不够。要知道任何一个地方中午太阳有多高，得先知道太阳此刻垂直照着地球的哪一点。</p>
+
+  <p>太阳光垂直照射地面的那个点，称为<b>太阳直射点</b>。任何一个时刻，地球上只有这一个点能让太阳出现在天顶，所以它所在的纬度就成了其他各处的基准。对北半球来说，直射点北移，中午的太阳随之升高；直射点越靠南，中午的太阳越低。</p>
+
+  <p>太阳直射点的位置随日期在南北回归线之间往返移动。夏至（6 月 21 日前后）它在北回归线，冬至（12 月 22 日前后）在南回归线，春分、秋分在赤道，春分到秋分这半年都在北半球。</p>
+
+  <p>天文台的官方节气表正好把这个对应关系列了出来：春分与秋分两栏的「太阳直射点纬度圈」都写「赤道」，夏至写「北回归线」，冬至写「南回归线」；同一张表还给出当地上中天的仰角——香港春分 68°、夏至 89°、冬至 44°。三个数字正好对应三种直射点位置。</p>
+
+  <figure class="lesson-figure lesson-figure--inline" role="img" aria-label="赤道与南北回归线，太阳直射点的纬度一年中在两条回归线之间往返，四个节气点落在同一条曲线上">
+<svg viewBox="0 0 520 306" width="100%" height="306" role="img" aria-hidden="true" font-family="sans-serif">
+  <!-- 左侧纬度标注右对齐到 x=110：先前右对齐到 102，最长的两条（北回归线/南回归线 23°26′）左边界到 -4，
+       被画布裁掉了两个字——学生截图里看到的"贴边"就是这个。画布同时从 500 加宽到 520。 -->
+  <line x1="116" y1="64" x2="152" y2="64" stroke="currentColor" stroke-width="1"/>
+  <text x="110" y="66" font-size="12" text-anchor="end" fill="currentColor">北极圈 66°34′N</text>
+  <line x1="116" y1="124" x2="152" y2="124" stroke="currentColor" stroke-width="1"/>
+  <text x="110" y="126" font-size="12" text-anchor="end" fill="currentColor">北回归线 23°26′N</text>
+  <line x1="116" y1="186" x2="152" y2="186" stroke="currentColor" stroke-width="1.6"/>
+  <text x="108" y="188" font-size="12" text-anchor="end" fill="currentColor">赤道 0°</text>
+  <line x1="116" y1="248" x2="152" y2="248" stroke="currentColor" stroke-width="1"/>
+  <text x="110" y="250" font-size="12" text-anchor="end" fill="currentColor">南回归线 23°26′S</text>
+  <path d="M 132 248 C 145.67 248 162.53 238.63 173 230 C 183.47 221.05 205.2 196.45 214 186 C 222.8 175.55 244.53 150.95 255 142 C 265.47 133.37 282.33 124 296 124 C 309.67 124 326.53 133.37 337 142 C 347.47 150.95 369.2 175.55 378 186 C 386.8 196.45 408.53 221.05 419 230 C 429.47 238.63 446.33 248 460 248" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- 冬至点从 (112,248) 移到 (132,248)：原来它与「南回归线 23°26′S」的文字框右端只差 3px、
+       纵向又重叠，净空实测 0.00px（文字压在节气点上），现净空 15px。 -->
+  <circle cx="132" cy="248" r="5" fill="currentColor"/>
+  <text x="142" y="266" font-size="12" fill="currentColor">冬至</text>
+  <circle cx="214" cy="186" r="5" fill="currentColor"/>
+  <text x="226" y="190" font-size="12" fill="currentColor">春分</text>
+  <circle cx="296" cy="124" r="5" fill="currentColor"/>
+  <text x="284" y="116" font-size="12" text-anchor="end" fill="currentColor">夏至</text>
+  <circle cx="378" cy="186" r="5" fill="currentColor"/>
+  <text x="390" y="190" font-size="12" fill="currentColor">秋分</text>
+  <!-- 往返范围：画成一根"量程括号"，跨在曲线右侧、正对 y=124（北回归线）到 y=248（南回归线）。
+       先前那一版画在 x=460、纵向 y=12→122——既在曲线之外，又指到了曲线以上的空白处；
+       中间那版画在曲线峰顶正下方（x=276），会压到曲线。这一版两者都避开。 -->
+  <line x1="474" y1="124" x2="474" y2="248" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="468" y1="124" x2="480" y2="124" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="468" y1="248" x2="480" y2="248" stroke="currentColor" stroke-width="1.2"/>
+  <text x="486" y="182" font-size="12" fill="currentColor">往返</text>
+  <text x="486" y="200" font-size="12" fill="currentColor">范围</text>
+</svg>
+    <figcaption>图 2 · 太阳直射点的活动范围：一年中它只走到两条回归线，不会越过；曲线按日期给出直射点纬度，夏至到北回归线、冬至到南回归线、二分在赤道</figcaption>
+  </figure>
+
+  <h2>直射点与正午太阳高度</h2>
+
+  <p>现在把纬度放进来。一个地方的正午太阳高度，取决于它的纬度与直射点纬度的差：两者相差越远，太阳就越斜，正午太阳高度越小。</p>
+
+  <p>无锡在北纬 31.5° 附近，香港在北纬 22.3° 附近。直射点在赤道（春分、秋分）时，两地与直射点的纬度差分别是 31.5° 与 22.3°，正午太阳高度分别是 58.5° 与 67.7°；天文台给香港这一栏公布的是 68°，与算出的 67.7° 相符。同样取夏至：直射点在北回归线 23°26′N，此时无锡与它的纬度差只剩 8.1°，正午太阳高度升到 81.9°；香港与它只差 1.1°，正午太阳高度 88.9°，天文台公布的整数 89° 与之相符。同一个直射点，两地看到的太阳高度不同，差别正好落在纬度差上。</p>
+
+  <p>对北回归线以北的地方（无锡在其中），还有一条可以直接用的结论：直射点最北只到北回归线，永远到不了无锡的纬度，所以太阳全年都不会经过天顶，正午时它一定位于正南。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "无锡（31.5°N）夏至正午太阳高度 81.9°\n一米杆影长 0.14 米。\n\n把同样的算法搬到香港（22.3°N）\n还是夏至这一天：\n\n① 纬度差会变成多少？\n夏至直射点在 23°26′N。\n② 香港的正午太阳高度\n比无锡的大还是小？为什么？\n③ 同一天、同一根一米杆\n香港的影子比无锡的长还是短？\n④ 香港这天上中天仰角官方给 89°\n和你算出的一致吗？",
+    "answer": "① 香港与直射点的纬度差\n$23°26′ - 22.3° \\approx 1.1°$\n无锡与直射点差 8.1°。\n\n② 香港的正午太阳高度更大\n$90° - 1.1° = 88.9°$\n因为纬度差越小，太阳越接近天顶。\n\n③ 影子更短，约 $1 \\div \\tan 88.9°$\n$\\approx 0.02$ 米，几乎缩到脚下。\n\n④ 一致：官方 89° 是取整值\n与算出的 88.9° 相符。\n\n判断依据：比较两地与直射点的纬度差\n差小的那一地高度大、影子短。",
+    "criteria": "① 香港与直射点的纬度差约 1.1°\n（写 1.1°—1.2° 都算对）。\n\n② 答出香港的正午太阳高度更大\n给出 88.9° 或 89° 量级\n并说明原因是纬度差更小。\n\n③ 答出香港的影子更短\n能说出直射点几乎在头顶。\n\n④ 把 88.9° 与官方 89° 对上\n并知道差额来自官方取整。\n\n四条都对算通过；\n纬度差与结论对、但说不出\n「纬度差越小太阳越高」算部分通过。"
+  }
+]'></div>
+
+  <h2>影长随季节变</h2>
+
+  <p>把前面两步合起来，影子随季节变化这件事就可以一路算出来了。</p>
+
+  <p>第一步，看这一天的直射点在哪条纬度圈上；第二步，用本地纬度与它的纬度差求出正午太阳高度；第三步，由 <span class="math-inline">\tan h = H / L</span> 把高度换成影长。以无锡（31.5°N）、一米直杆为例：</p>
+
+  <table>
+    <thead>
+      <tr><th>时　间</th><th>直射点纬度</th><th>正午太阳高度</th><th>一米杆的正午影长</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>夏至（6 月 21 日前后）</td><td>23°26′N</td><td>81.9°</td><td>0.14 米</td></tr>
+      <tr><td>春分（3 月 20 日前后）</td><td>赤道</td><td>58.5°</td><td>0.61 米</td></tr>
+      <tr><td>冬至（12 月 22 日前后）</td><td>23°26′S</td><td>35.1°</td><td>1.43 米</td></tr>
+    </tbody>
+  </table>
+
+  <p>一年之内，同一根竿的正午影长从 0.14 米变到 1.43 米，前后差了十倍。夏至到冬至，直射点南移 46°52′，无锡与它的纬度差由 8.1° 扩大到 54.9°，正午太阳高度的变化就落在这段纬度差上：太阳斜下去，影子长起来。</p>
+
+  <p>至于方向：无锡的正午太阳位于正南，所以正午影子指向正北，一年里都是这个方向。会掉头的是日出与日落时的影子，它随日期与季节大幅摆动；要算它偏到哪里，得先把方向也用角度量出来。</p>
+
+  <div class="lesson-practice">
+    <div class="lesson-practice__head">
+      <span class="lesson-practice__level">练习</span>
+      <span class="lesson-practice__title">第 1 步 · 用影长反推太阳高度</span>
+    </div>
+
+      <p>无锡地方时正午，一根 1.4 米高的竹竿影子长 0.51 米。</p>
+
+      <ol>
+        <li>先算比值：竿高 ÷ 影长 = 1.4 ÷ 0.51。这个数就是 <span class="math-inline">\tan h</span>，在 2.7 附近。</li>
+        <li>由它反推太阳高度 <span class="math-inline">h</span>，算到 0.1° 即可。这个高度比夏至正午的 82° 低一些，说明这天太阳不在最北的位置上。</li>
+        <li>用上面的链条判断这天直射点在哪条纬度圈上。天文台的节气表把这一天的直射点写成「11°」——把你的结果与它对一眼，差 0.5° 以内就算过。</li>
+      </ol>
+  </div>
+
+  <div class="lesson-practice">
+    <div class="lesson-practice__head">
+      <span class="lesson-practice__level">练习</span>
+      <span class="lesson-practice__title">第 2 步 · 在自家窗台上量一次</span>
+    </div>
+
+      <ol>
+        <li>挑一个晴天的中午前后，在窗台或阳台上竖直立一根筷子，量出露出的高度。</li>
+        <li>每 5 分钟量一次影长，记下最短的那一次——那是最接近「太阳过子午线」的时刻。</li>
+        <li>用最短影长除以竿高得到 <span class="math-inline">\tan h</span>，反推出这一天的正午太阳高度，写下来。</li>
+        <li>再记下影子偏向哪一边。无锡一年到头正午的影子都朝北，因为太阳始终在正南；哪一天影子朝南，说明那天量到的时间不在正午前后。</li>
+      </ol>
+  </div>
+
+  <h2>太阳什么时候算正午</h2>
+
+  <p>前面反复用到「正午」。天文台给它下的定义是：太阳每日正午横越本地子午线，视太阳时由这件事定出来，古代多用日晷测定。也就是说，正午是太阳给出的事件，钟表只是记录它的工具，两者本来可能对不上。</p>
+
+  <p>在无锡，这个差是可以当场算出来的：东八区的中央经线是 120°E，这里的地方时由它定；无锡经度约 120.3°E，两者相差 0.3°，折合时间约 1.2 分钟。所以无锡地方时正午（太阳过子午线）比手表上的 12 点早约 1.2 分钟。拿一根竿在正午前后连续测影，最短影子出现的那一刻，落在手表上大约 11:58.8 的位置——太阳时间与手表时间最贴身的证据就在这 1.2 分钟里。</p>
+
+  <p>这 1.2 分钟还只是经度差带来的那一项。天文台的年历里写明，太阳的视运动速度一年之中都在变化：地球沿椭圆轨道运行，速度随位置而变；地轴与公转轨道面又有夹角，太阳在地球自转方向上的投影速度因季节而不同。因此视太阳时的时间长度并不均匀，它与平太阳时的差称为均时差，一年里能差到十几分钟。把这几项加起来，才是手表读数与「太阳正午」之间的全部距离。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "在无锡用竿影量正午\n影子最短那一刻，手表指在 11:58.8。\n\n① 地方时正午与手表正午\n哪个来得早？差多少？\n② 这 1.2 分钟怎么从经度差算出来？\n写出算式。\n③ 地方时正午与区时正午\n是不是同一个时刻？为什么？\n④ 只补上这 1.2 分钟\n就够把观测与天文台数据对齐吗？\n还差哪一项？",
+    "answer": "① 地方时正午来得早\n太阳过子午线在前\n手表正午在 1.2 分钟之后。\n\n② 无锡 120.3°E\n东八区中央经线 120°E，相差 0.3°。\n经度每差 1° 折合时间 4 分钟\n$0.3 \\times 4 = 1.2$ 分钟。\n无锡在中央经线以东，地方时更早。\n\n③ 不是。\n区时取中央经线 120°E 的地方时\n是无锡所在时区统一使用的时刻；\n无锡地方时以本地 120.3°E 经线为准\n两者差的就是这 0.3°。\n\n④ 不够，还差均时差。\n视太阳时与平太阳时的差叫均时差：\n地球走椭圆轨道、速度随位置而变\n加上地轴与公转轨道面有夹角\n视太阳时的长度并不均匀\n一年里能差到十几分钟。",
+    "criteria": "① 答出地方时正午较早\n差约 1.2 分钟（写 11:58.8 也对）。\n方向写反算不通过。\n\n② 给出 $0.3° \\times 4$ 分钟／度\n$= 1.2$ 分钟\n并说明 0.3° 来自 120.3°E 与 120°E 之差。\n\n③ 答出两者不是同一时刻\n区时是中央经线的地方时\n（无锡 120.3°E 偏东，故地方时更早）。\n\n④ 说出还差均时差\n并给出理由（椭圆轨道速度变化、地轴倾斜）\n量级到十几分钟。\n\n四条都对算通过；\n①②③ 对而 ④ 只答「还有别的误差」\n不算通过。"
+  }
+]'></div>
+
+  <h2>两个容易弄反的地方</h2>
+
+  <ul>
+    <li><b>影长与日地距离无关。</b> 直觉容易把夏天影子短、冬天影子长归到「离太阳远近」上，但地球在 7 月初才过远日点，那时正是影子最短的夏至附近——两个事实正好反着。影长只由太阳高度决定，太阳高度只由纬度与直射点纬度决定。</li>
+    <li><b>「太阳升得高」要换成有单位的数。</b> 这句话无法比较、无法检验，也无法用来算影子；换成「正午太阳高度 81.9°」之后，它就能直接代入 <span class="math-inline">\tan h = H / L</span> 算出影长。后面的课要做的，就是把每一个能判断的性质都换成这样的数。</li>
+  </ul>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "无锡（31.5°N）立一根一米直杆\n夏至正午影长 0.14 米。\n\n① 按直射点纬度到影长这三步\n算冬至正午（12 月 22 日前后）的影长：\n直射点位置、纬度差、正午太阳高度、影长\n逐步写出来（$\\tan 35.1° \\approx 0.70$）。\n② 冬至正午，这根竿的影子朝哪个方向？\n说清判断依据。\n③ 一年里正午影长从 0.14 米变到约 1.4 米\n这个变化是哪个量在变？",
+    "answer": "① 冬至直射点在南回归线 23°26′S\n无锡 31.5°N，纬度差\n$31.5° + 23.4° \\approx 54.9°$。\n正午太阳高度 $90° - 54.9° = 35.1°$\n影长 $L = 1 \\div \\tan 35.1°$\n$\\approx 1.43$ 米。\n\n② 朝正北。\n无锡在北回归线以北\n直射点最北只到北回归线\n太阳全年到不了无锡头顶\n正午太阳始终在正南\n影子与太阳方位相反。\n\n③ 变的是直射点纬度：\n它从北回归线南移到南回归线\n无锡与它的纬度差由 8.1° 扩大到 54.9°\n正午太阳高度由 81.9° 降到 35.1°\n影长由 0.14 米拉到 1.43 米。",
+    "criteria": "① 三步齐全：\n直射点在 23°26′S；纬度差约 54.9°\n（54.5°—55°）；正午太阳高度约 35.1°；\n影长在 1.35—1.50 米之间\n（写约 1.4 米也算对）。\n\n② 答出影子朝正北\n并说出依据：正午太阳在正南\n影与太阳方位相反；\n提到无锡在北回归线以北\n所以太阳全年不会到天顶。\n\n③ 指出变的是直射点纬度\n（它在南北回归线之间往返）\n或等效地说纬度差在变。\n\n① 的影长落在区间内才算算得对；\n缺 ② 算部分通过。"
+  }
+]'></div>
+
+  <ul class="lesson-resources">
+    <li><a href="https://basic.smartedu.cn/tchMaterial">人教版《选择性必修一》第一章 地球的运动</a><span class="lesson-resources__meta">教材基准 · 本章范围：第一节 地球的自转和公转、第二节 地球运动的地理意义</span></li>
+    <li><a href="https://www.hko.gov.hk/tc/gts/astron2026/files/2026SolarTerms24.pdf">香港天文台年曆 2026 · 二十四節氣</a><span class="lesson-resources__meta">官方数据 · 十二个中气的日期、太阳直射点纬度圈与日出／上中天／日落的方位角与仰角</span></li>
+    <li><a href="https://www.hko.gov.hk/tc/gts/astron2026/files/HKO_almanac_2026.pdf">香港天文台年曆 2026 · 視太陽時的計算方法</a><span class="lesson-resources__meta">官方口径 · 视太阳时与均时差的定义、标准时间与经度差的换算方式</span></li>
+    <li><a href="https://www.hko.gov.hk/tc/gts/astronomy/Sun_Transit.htm">日上中天的時間、方位及仰角</a><span class="lesson-resources__meta">核对来源 · 逐日的太阳上中天时刻、方位角与仰角，本地的正午太阳高度可以对表</span></li>
+  </ul>
+
+  <div class="lesson-related">
+    <a href="0002-motion.basics.html">下节课：地球的两种运动</a>
+  </div>
+
+  <!-- ── 提问提示：固定写法，别删 ── -->
+
+  <div class="lesson-ask">
+    <b>没看懂？随时问</b>
+    把看不懂的段落（或报错）原样复制回会话，说一句哪里不懂就行，我只解释这一段，不打断你的进度。
+  </div>
+
+  <!-- ── 上/下节课指针由渲染器按 curriculum.yaml 的 nodes 顺序算（第一课无 --prev、最后一课无 --next） ── -->
+
+  <nav class="lesson-nav" aria-label="上一课 / 下一课">
+    <a class="lesson-nav__link lesson-nav__link--next" href="0002-motion.basics.html">
+      <span class="lesson-nav__dir">下节课</span>
+      <span class="lesson-nav__title">地球的两种运动</span>
+    </a>
+  </nav>
+
+  <footer class="lesson-footer">
+    StudyMate · 0001 正午的影子 · 本地学习工作区
+  </footer>
+
+</article>
+
+<script src="../../../assets/sayo/sayo.js"></script>
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<script src="../../../assets/katex/katex.min.js" defer></script>
+<script src="../../../assets/lesson-math.js" defer></script>
+<script src="../assets/quiz.js" defer></script>
+<script src="../assets/lesson-toc.js" defer></script>
+<script>LearnTheme.wire(document.getElementById('lesson-theme-checkbox'));</script>
+</body>
+</html>

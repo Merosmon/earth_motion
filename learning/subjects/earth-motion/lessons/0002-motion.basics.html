@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地球的两种运动 · 地球运动（高中地理·人教版选择性必修一）</title>
+
+<!-- 共享层在 learning/assets/，课件在 learning/subjects/<slug>/lessons/ 下，所以是 ../../../assets/ -->
+<link rel="stylesheet" href="../../../assets/sayo/sayo.css">
+<link rel="stylesheet" href="../../../assets/learn-theme.css">
+<link rel="stylesheet" href="../assets/style.css">
+
+<!-- 主题要在首帧前应用，避免闪白/闪黑 -->
+<script src="../../../assets/learn-theme.js"></script>
+<script>LearnTheme.apply();</script>
+</head>
+
+<body class="lesson-body">
+
+<nav class="lesson-bar">
+  <a href="../index.html">← 返回课程</a>
+  <span>地球运动（高中地理·人教版选择性必修一）</span>
+  <span class="lesson-bar__no">0002</span>
+  <!-- 课件页自带主题开关：学生从文件管理器直接打开课件时也能切暗色 -->
+  <label class="syo-toggle syo-toggle--theme lesson-bar__toggle" title="切换深浅主题" aria-label="切换深浅主题">
+    <input type="checkbox" id="lesson-theme-checkbox" checked>
+    <span class="syo-toggle-track"></span>
+    <span class="syo-toggle-knob">
+      <svg class="syo-toggle-sun" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="3.5" stroke="#f57c00" stroke-width="1.5"/><path d="M10 2v2.5M10 15.5V18M2 10h2.5M15.5 10H18M4.34 4.34l1.77 1.77M13.89 13.89l1.77 1.77M4.34 15.66l1.77-1.77M13.89 6.11l1.77-1.77" stroke="#f57c00" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg class="syo-toggle-moon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.5 12.5A6 6 0 019 4.5a6 6 0 007.5 8z" stroke="#5c6bc0" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </span>
+  </label>
+</nav>
+
+<article class="lesson">
+
+  <header class="lesson-header">
+    <span class="lesson-header__eyebrow">0002 · 地球的两种运动</span>
+    <h1>地球的两种运动</h1>
+    <p class="lesson-goal"><b>本节目标：</b>能把昼夜交替、东升西落、地方时差记在自转账上，把直射点移动与四季记在公转账上，并说出每一个现象是由哪个周期决定的。</p>
+  </header>
+
+  <!-- ── 正文：渲染器按内容文件（lessons/<序号>-<节点id>.md）产出，块词汇见 docs/规范/课件内容格式.md ── -->
+
+  <div class="lesson-note">
+    <b>这一节在整章里的位置</b>
+    <p>上一节把「正午的影子为什么随季节变长变短」问清楚了，也把太阳高度与影子长度之间的换算立了起来。这一节要处理的是它背后的两笔账：地球每天都在转，每年又在绕太阳跑，哪些现象归第一笔账，哪些归第二笔账。</p>
+  </div>
+
+  <h2>天上跑着两个周期</h2>
+
+  <p>从竿影说起。无锡一根一米直杆，夏至正午的影子是 0.14 米，冬至正午是 1.43 米；同一个正午，杆影还总是落在正北与正南那条线上。换到一天之内看，同一根杆的影子在日出与日落前后最长，正午前后最短，方向也跟着太阳的位置转过去。位置、长度、方向都在变，这三类变化都要有来源。</p>
+
+  <p>再看远处。日出时太阳从地平线某个方位冒出来，方位角摆动 51°；日落时它又从西边落下去。这些都发生在天上，地面上的人可用的量只有两个：太阳有多高、太阳在哪个方位。要把它们的变化说清楚，需要先把变化按时间分成两笔：一笔以日为单位，一笔以年为单位。</p>
+
+  <p>同一根竿上，一笔账是「每天的同一个正午，太阳高度为什么差不多」，另一笔账是「同一天的正午，影子为什么由长变短、再由短变长」。把这两笔分开，后面所有的推导才有共同的出发点。</p>
+
+  <figure class="lesson-figure lesson-figure--inline" role="img" aria-label="从北极上方俯视地球，平行的阳光把地球分成昼半球与夜半球，两半球的分界是晨昏圈">
+<svg viewBox="0 0 480 372" role="img" aria-hidden="true" font-family="sans-serif">
+  <!-- ── 这张图的硬几何（由 solve_ray_geometry.py 算出，量角脚本逐个验过）──
+       ① 晨昏圈必须垂直于阳光、且过两个极点；两条同时成立只有一解：**阳光方向与地轴垂直**。
+          本图取：地轴方向 66.5°（与铅垂线成 23.5°）→ 北极 (218,127)、南极 (282,273)；
+          阳光方向 156.5°（右下 → 左上），与地轴夹角 **90.00°**；晨昏圈与地轴同线。
+          前一版把 23.5° 量在了错误的那一侧（画成与铅垂线差 66.5°），量角脚本一测就露了。
+       ② **涂色用固定色** #1b2a4a（不用 currentColor）：currentColor 在深色主题下会变浅，
+          让"夜半球"反而发亮，含义在两个主题下相反。球面与晨昏圈用金色描边，
+          保证深色主题下边界可见。 -->
+
+  <!-- 地球 -->
+  <circle cx="250" cy="200" r="80" fill="none" stroke="#f0c060" stroke-width="2"/>
+  <!-- 夜半球：以晨昏圈（北极—南极）为界，在背光的那一侧 -->
+  <path d="M 218 127 L 282 273 A 80 80 0 0 0 218 127 Z" fill="#1b2a4a" opacity="0.6"/>
+  <!-- 晨昏圈 = 地轴所在直线：过北极与南极 -->
+  <line x1="218" y1="127" x2="282" y2="273" stroke="#f0c060" stroke-width="2"/>
+  <line x1="218" y1="127" x2="282" y2="273" stroke="currentColor" stroke-width="1"
+        stroke-dasharray="8 5"/>
+  <circle cx="218" cy="127" r="3.5" fill="currentColor"/>
+  <circle cx="282" cy="273" r="3" fill="currentColor"/>
+  <text x="212" y="116" font-size="11" text-anchor="end" fill="currentColor">北极</text>
+  <text x="292" y="286" font-size="11" fill="currentColor">南极</text>
+  <!-- 赤道面：与地轴垂直的椭圆 -->
+  <ellipse cx="250" cy="200" rx="76" ry="22" fill="none" stroke="#f0c060" stroke-width="0.9"
+           stroke-dasharray="6 4" opacity="0.75" transform="rotate(-23.5 250 200)"/>
+
+  <!-- 阳光：方向 156.5°，末端顶到晨昏圈外侧，不穿进球体 -->
+  <line x1="392" y1="131" x2="216" y2="207" stroke="currentColor" stroke-width="2.2"/>
+  <line x1="392" y1="95" x2="172" y2="191" stroke="currentColor" stroke-width="2.2"/>
+  <line x1="366" y1="191" x2="266" y2="234" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M 216 207 L 229 205 L 222 195 Z" fill="currentColor"/>
+  <path d="M 172 191 L 185 189 L 178 179 Z" fill="currentColor"/>
+  <path d="M 266 234 L 279 232 L 272 222 Z" fill="currentColor"/>
+  <text x="398" y="82" font-size="12" text-anchor="end" fill="currentColor">平行的阳光</text>
+
+  <!-- 昼半球 / 夜半球：大字压在球内，球外短标签说明名称 -->
+  <text x="292" y="192" font-size="26" font-weight="700" fill="currentColor">昼</text>
+  <text x="186" y="238" font-size="26" font-weight="700" text-anchor="middle" fill="#cfd8e8">夜</text>
+  <text x="398" y="216" font-size="12" text-anchor="end" fill="currentColor">昼半球</text>
+  <text x="398" y="232" font-size="10" text-anchor="end" fill="currentColor">（受光）</text>
+  <text x="104" y="238" font-size="12" fill="currentColor">夜半球</text>
+  <text x="104" y="254" font-size="10" fill="currentColor">（背光）</text>
+
+  <!-- 倾角与自转 -->
+  <path d="M 250 138 A 62 62 0 0 0 236 141" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="150" y="352" font-size="11" fill="currentColor">地轴倾斜 23.5°</text>
+  <path d="M 180 250 A 92 92 0 0 1 196 160" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <path d="M 196 160 L 188 166 L 199 171 Z" fill="currentColor"/>
+  <text x="150" y="266" font-size="11" text-anchor="end" fill="currentColor">自转方向</text>
+  <text x="300" y="352" font-size="11" fill="currentColor">晨昏圈（垂直于阳光，过极点）</text>
+</svg>
+    <figcaption>图 1 · 从北极上方俯视地球：阳光从一侧平行射来，地球被分成昼半球与夜半球，两半球的分界是晨昏圈</figcaption>
+  </figure>
+
+  <h2>自转与太阳日</h2>
+
+  <p>地球绕地轴的旋转运动称为<b>地球自转</b>。这个定义里定下了四件事：绕什么转、往哪个方向转、转一圈多久、被什么量出来。</p>
+
+  <p>方向是自西向东。从北极上方看下去，地球按逆时针方向转，这张俯视图里的箭头画的就是这个方向。转的轴是地轴，它穿过地心，与地面相交的两点叫地极。</p>
+
+  <p>周期要拿一个参照物来量。天文台的年历首先交代了「正午」是怎么被记下来的：太阳每日正午横越本地子午线，视太阳时由这件事定出来，古代多用日晷测定。年历接着给出的量法最直接：<b>太阳连续两次经过同一地点的子午线，中间隔一个太阳日，也就是日常说的 24 小时。</b> 按这个说法，自转的角速度是每小时 15°。</p>
+
+  <p>转一圈的效果在俯视图上最清楚。阳光平行射来，同一时刻只照亮地球的一半：被照亮的半个球面是<b>昼半球</b>，背对阳光的半个球面是<b>夜半球</b>，两者的分界线是<b>晨昏圈</b>。地球转着，地面各点依次从夜半球转到昼半球、再转回去，昼夜交替因此有了固定的周期。日晷靠的正是这个周期：影子的位置随太阳在天空中的位置移动，地球转一圈，刻度也跟着读一遍。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "从北极上空俯视地球，它自转的方向是？",
+    "opts": [
+      "逆时针，与自东向西一致",
+      "逆时针，与自西向东一致",
+      "顺时针，与自西向东一致",
+      "顺时针，与自东向西一致"
+    ],
+    "ans": 1,
+    "why": "自转方向是自西向东，从北极上方看就是逆时针；\n从南极上方看才是顺时针，方向本身没有变。"
+  },
+  {
+    "q": "年历把「正午」记成太阳横越本地子午线的时刻。\n\n① 一个太阳日的判据是什么？它有多长？\n② 自转的角速度是多少？由 ① 的周期怎么算出来？\n③ 昼夜交替重复一次的周期是多少？\n它凭什么记在自转账上？",
+    "answer": "① 判据是太阳连续两次经过同一地点的子午线，\n这一段就是日常说的一个太阳日，约 24 小时。\n\n② 转满一圈 $360° \\div 24 = 15°$，\n所以自转的角速度是每小时 15°。\n\n③ 昼夜交替 24 小时重复一次，周期是「日」，\n按判据「周期是日记自转账」归在自转账上。",
+    "criteria": "① 判据写成「太阳连续两次过同一地点的子午线」\n并给出 24 小时；\n只答「地球转一圈」而没指向子午线算部分通过。\n\n② 给出每小时 15°，\n并显示出它由 $360° \\div 24$ 小时得来。\n\n③ 答出 24 小时／一个太阳日、判为自转账，\n并给出「周期是日」这条判据。\n\n三条都答到算通过；\n② 直接抄 15° 而不给算法算部分通过。"
+  }
+]'></div>
+
+  <h2>自转与地方时</h2>
+
+  <p>正午是太阳给出的时刻，这件事和经线绑在一起。某条经线正好对着太阳方向时，那条经线上就是正午，太阳所在的方位因此可以由经线读出。地球自西向东转，太阳相对地面的方位就持续往西退，落到本地经线上的时刻也就依次经过东边的经线、再到西边的经线。于是经线的顺序固定下来：东边的先经历正午，西边的后经历。</p>
+
+  <p>以当地经线为准量出来的时间称为<b>地方时</b>。这个定义来自自转：地方时正午是太阳横越本地子午线的时刻，两条经线相差多少度，地方时就相差对应的时间。经度每差 1°，时间差 4 分钟。</p>
+
+  <p>无锡经度约 120.3°E，东八区的中央经线是 120°E，两者相差 0.3°，折合时间约 1.2 分钟。无锡在东边，所以无锡地方时正午比手表上的正午早约 1.2 分钟。上一节量的那根竿，影子最短的一刻落在手表上 11:58.8，差的就是这 1.2 分钟。</p>
+
+  <p>这 1.2 分钟还只是经度差带来的那一项。天文台把两项合起来算得更细：标准时间按 120°E 的平太阳时定义，视太阳时还要加上均时差，而均时差在一年里能差到十几分钟。这一项一年一变，属于另一笔账。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "无锡约 120.3°E，东八区中央经线是 120°E。\n\n无锡地方时正午与手表上的正午相比？",
+    "opts": [
+      "晚约 1.2 分钟，无锡在中央经线以东",
+      "早约 1.2 分钟，这一项由公转造成",
+      "不早也不晚，东八区各地共用手表时刻",
+      "早约 1.2 分钟，无锡在中央经线以东"
+    ],
+    "ans": 3,
+    "why": "120.3°E 在 120°E 以东 0.3°，每 1° 折 4 分钟，\n$0.3° \\times 4 = 1.2$ 分钟，所以无锡先到正午。\n公转的周期是一年，管不到这 1.2 分钟。"
+  },
+  {
+    "q": "无锡约 120.3°E，北京约 116.4°E，两地都在东八区。\n\n① 两地的地方时相差多少？写出算式。\n② 哪一地的地方时正午先到？依据是什么？\n③ 两地手表上的时刻一样吗？\n这时「地方时差」还在不在？",
+    "answer": "① 经度差 $120.3° - 116.4° = 3.9°$，\n每 1° 折 4 分钟：\n$3.9° \\times 4 = 15.6$ 分钟。\n\n② 无锡先到正午。\n无锡在 116.4°E 以东，太阳先照到东边的经线，\n所以东边的地方时早 15.6 分钟。\n\n③ 手表上的时刻一样：\n东八区统一用中央经线 120°E 的地方时，\n也就是常说的北京时间。\n地方时差本身还在，只是区时把它统一掉了：\n无锡地方时正午落在手表 11:58.8，\n北京的地方时正午落在手表 12:14.4。",
+    "criteria": "① 由 $120.3° - 116.4° = 3.9°$，\n按每 1° 折 4 分钟算出 15.6 分钟\n（15—16 分钟之间都算对）。\n\n② 答出无锡在前，\n依据是无锡在东、太阳先照到东边的经线\n（或写成「东边的地方时早」）。\n方向写反算不通过。\n\n③ 答出手表时刻相同（东八区共用 120°E 的地方时），\n并指出地方时差并没有消失。\n\n三条都答到算通过；\n①② 对而 ③ 把区时当成地方时算部分通过。"
+  }
+]'></div>
+
+  <h2>自转单独解释不了的变化</h2>
+
+  <p>地方时的差落在 1.2 分钟这个量级上，同一地点一年之内的正午却不会因此挪动十几分钟。真正在一年里大幅变化的是另一类量。天文台的节气表把香港 2026 年的一些日子列了出来：</p>
+
+  <table>
+    <thead>
+      <tr><th>中气</th><th>日期</th><th>日出方位角</th><th>上中天仰角</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>大寒</td><td>1 月 20 日</td><td>112°</td><td>48°</td></tr>
+      <tr><td>春分</td><td>3 月 20 日</td><td>90°</td><td>68°</td></tr>
+      <tr><td>夏至</td><td>6 月 21 日</td><td>64°</td><td>89°</td></tr>
+      <tr><td>秋分</td><td>9 月 23 日</td><td>90°</td><td>68°</td></tr>
+      <tr><td>冬至</td><td>12 月 22 日</td><td>115°</td><td>44°</td></tr>
+    </tbody>
+  </table>
+
+  <p>日出方位角从 112° 走到 64°，再从 64° 走回 115°，一年里摆动 51°。日出方位的含义按本课程的约定：以正北为零、顺时针计量，东侧的值在 0° 到 180° 之间。春分与秋分的 90° 是正东，夏至的 64° 已经落到正东以北 26°，冬至的 115° 落到正东以南 25°。</p>
+
+  <p>同一天里看不出这个摆动：一天之内，日出点总是从东往西移过去，只有 24 小时，来不及把方位角挪出几度。一年里它却掉头走了一个来回。仰角那一列也是这个道理：一天之内的变化来自太阳的高度，一年之内的变化幅度到了 45°。</p>
+
+  <p>上一节已经把这件事的一半讲清楚了：正午太阳高度由本地纬度与<b>太阳直射点</b>的纬度差决定，直射点的纬度是那个随日期变的量。于是路径变成这样一条单向的链：某个一年为周期的变化，牵动直射点的纬度，再牵动正午太阳高度，最后落到影长上。链条的起点在那条以年为周期的运动上。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "下面是一段把两笔账混在一起的笔记：\n\n甲 地球每天自转一圈、每年绕太阳跑一圈，\n两种运动合起来就有了四季与昼夜。\n乙 昼夜交替与四季更替都是地球在动的结果，\n周期也一样，都按一天算。\n丙 太阳东升西落由公转造成，\n所以夏至日出偏北、冬至日出偏南。\n丁 地轴斜着绕太阳转一圈，就有了四季。\n\n① 逐句指出哪半句对、哪半句错。\n② 把错的部分改成正确说法。\n③ 补一条判据，说明每个现象凭什么记在某笔账上，\n并给每个现象写出重复周期。",
+    "answer": "甲 半对：「每天自转、每年公转」对，\n把两种运动合起来当四季与昼夜的成因是错的。\n昼夜交替只由自转定，四季只由公转定。\n\n乙 错：两个现象的周期不能都按一天算。\n昼夜交替的周期是太阳日 24 小时，\n四季更替的周期是回归年 365.2422 日。\n\n丙 前半错、后半对：\n东升西落由自转造成（角速度每小时 15°），\n夏至日出偏北、冬至日出偏南属于公转，\n日出方位角随直射点纬度在一年里摆动。\n\n丁 错在把两件事合成一件：\n地轴的倾斜是一个角度（黄赤交角），\n它的方向全年不变，不是「绕着转」；\n四季来自这个倾斜在公转一周里造成的\n太阳热量在各纬度上的分配变化。\n\n判据：现象重复一次的周期是日，记自转账；\n是年，记公转账。\n按这条判据分账：昼夜交替、东升西落、\n地方时东早西晚都按日重复，记自转账；\n四季与节气、直射点往返、\n正午太阳高度与日出方位的季节变化\n按年重复（365.2422 日），记公转账。",
+    "criteria": "甲 判到：不能把两种运动合起来解释两类现象，\n昼夜交替归自转、四季归公转。\n\n乙 判到：周期不能都按一天算，\n并给出 24 小时与 365.2422 日两个周期。\n\n丙 判到两层：\n东升西落属于自转（前半错），\n日出方位的季节摆动属于公转（后半对）。\n只改一半算部分通过。\n\n丁 判到：「地轴斜着绕太阳转」是模糊说法，\n要拆成倾斜的角度与公转的周期两件事，\n并且地轴方向全年不变。\n漏掉丁按部分通过。\n\n③ 判据写成「周期是日记自转、是年记公转」，\n并给两组现象各配周期数值。\n\n四条都判到、判据与周期都写清算通过；\n只抄判据、没有逐句判按不通过处理。"
+  }
+]'></div>
+
+  <h2>公转与太阳年</h2>
+
+  <p>地球绕日沿近似椭圆轨道运行，这种运动称为<b>地球公转</b>。它的四个要素与自转一一对应：绕太阳转、方向自西向东（两笔账的方向一致）、轨道所在的平面叫黄道面、周期是一年。</p>
+
+  <p>周期的准确值从节气表可以读出来。二十四节气是近乎均匀分布在黄道上的 24 个位置的时刻，一个循环历时一年；同一个中气在相邻两年之间出现的间隔就是一个回归年，长度 365.2422 日。用整 365 天的日历去对，每年会差出约四分之一日，这是闰年要补的那一天。</p>
+
+  <p>速度有一处要注意：地球走这条轨道的速度随它在轨道上的位置而变化，近日处快、远日处慢。上一节记下的那条事实与此相合——地球在 7 月初过远日点，那时正是正午影子最短的夏至前后。日地距离的远近与四季没有对应关系，远近决定的只是公转速度，一年里改变的是太阳热量在各纬度上的分配。</p>
+
+  <figure class="lesson-figure lesson-figure--inline" role="img" aria-label="地球沿椭圆轨道公转一周，四个位置分别对应二至二分，各位置的地轴互相平行、指向同一方向">
+<svg viewBox="0 0 560 380" role="img" aria-hidden="true" font-family="sans-serif">
+  <g transform="translate(20 0)">
+  <ellipse cx="280" cy="200" rx="150" ry="100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="6 5"/>
+  <circle cx="280" cy="200" r="7" fill="currentColor"/>
+  <text x="280" y="226" font-size="12" text-anchor="middle" fill="currentColor">太阳</text>
+  <circle cx="130" cy="200" r="12" fill="currentColor" stroke="none"/>
+  <line x1="126" y1="193" x2="135" y2="204" stroke="#ffffff" stroke-width="1.4"/>
+  <line x1="135" y1="193" x2="126" y2="204" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="98" y="205" font-size="12" text-anchor="end" fill="currentColor">夏至</text>
+  <circle cx="280" cy="300" r="12" fill="currentColor" stroke="none"/>
+  <line x1="272" y1="296" x2="280" y2="304" stroke="#ffffff" stroke-width="1.4"/>
+  <line x1="280" y1="296" x2="288" y2="304" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="280" y="332" font-size="12" text-anchor="middle" fill="currentColor">秋分</text>
+  <circle cx="430" cy="200" r="12" fill="currentColor" stroke="none"/>
+  <line x1="422" y1="196" x2="430" y2="204" stroke="#ffffff" stroke-width="1.4"/>
+  <line x1="430" y1="196" x2="438" y2="204" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="462" y="205" font-size="12" fill="currentColor">冬至</text>
+  <circle cx="280" cy="100" r="12" fill="currentColor" stroke="none"/>
+  <line x1="272" y1="96" x2="280" y2="104" stroke="#ffffff" stroke-width="1.4"/>
+  <line x1="280" y1="96" x2="288" y2="104" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="280" y="72" font-size="12" text-anchor="middle" fill="currentColor">春分</text>
+  <g stroke="currentColor" stroke-width="1.4" fill="none">
+    <line x1="130" y1="200" x2="135.8" y2="178.4"/>
+    <line x1="280" y1="300" x2="285.8" y2="278.4"/>
+    <line x1="430" y1="200" x2="435.8" y2="178.4"/>
+    <line x1="280" y1="100" x2="285.8" y2="78.4"/>
+  </g>
+  <g stroke="currentColor" stroke-width="0.9" stroke-dasharray="4 3" fill="none">
+    <line x1="135.8" y1="178.4" x2="140" y2="163"/>
+    <line x1="285.8" y1="278.4" x2="290" y2="263"/>
+    <line x1="435.8" y1="178.4" x2="440" y2="163"/>
+    <line x1="285.8" y1="78.4" x2="290" y2="63"/>
+  </g>
+  <ellipse cx="280" cy="200" rx="10" ry="9" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <text x="320" y="64" font-size="11" fill="currentColor">地轴指向不变</text>
+  <path d="M 398 152 A 92 92 0 0 1 356 272" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <path d="M 356 272 L 352 260 L 363 266 Z" fill="currentColor"/>
+  <text x="412" y="168" font-size="12" fill="currentColor">公转方向</text>
+  <text x="280" y="366" font-size="11" text-anchor="middle" fill="currentColor">轨道所在平面：黄道面</text>
+  </g>
+</svg>
+    <figcaption>图 2 · 地球在椭圆轨道上公转一周：太阳位于其中一个焦点附近，四个位置对应夏至、秋分、冬至、春分，四个位置的地轴互相平行</figcaption>
+  </figure>
+
+  <p>图上四个位置对应四个节气，四个地球的地轴画成互相平行，都指向同一个方向。地轴的方向在一年里保持不变，这件事在下一节要用来推直射点的移动；本课取它的一段：公转一周，同样的位置重复出现一次。</p>
+
+  <h2>两笔账分开记</h2>
+
+  <p>把两笔账并排放，第一章要解释的现象就都有了归属：</p>
+
+  <table>
+    <thead>
+      <tr><th>可观测现象</th><th>记在哪笔账上</th><th>由哪个量决定</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>昼夜交替</td><td>自转</td><td>太阳日 24 小时</td></tr>
+      <tr><td>太阳每日东升西落</td><td>自转</td><td>每小时 15° 的角速度</td></tr>
+      <tr><td>地方时东早西晚</td><td>自转</td><td>经度差，每 1° 差 4 分钟</td></tr>
+      <tr><td>直射点在南北回归线之间往返</td><td>公转</td><td>回归年 365.2422 日</td></tr>
+      <tr><td>正午太阳高度的季节变化</td><td>公转</td><td>直射点的纬度</td></tr>
+      <tr><td>日出日落方位的季节摆动</td><td>公转</td><td>直射点的纬度</td></tr>
+      <tr><td>四季的划分与二十四节气</td><td>公转</td><td>太阳在黄道上的位置</td></tr>
+    </tbody>
+  </table>
+
+  <p>分法可以压成一条判据：<b>现象重复一次的周期是日，记在自转账上；是年，记在公转账上。</b> 昼夜交替一天一次，四季更替一年一次，两类周期差了两个数量级，混不到一起。上一节留下的那条问题也有了答案：正午影长在一年里从 0.14 米到 1.43 米再回到 0.14 米，重复的周期是年，归公转账；同一天里它由长变短、再由短变长，那是自转账上的同一根竿。</p>
+
+  <p>还有一类现象要同时用到两笔账。正午影长就是一个例子：<b>太阳直射点的纬度</b>在一年里挪动，它决定正午太阳高度，也决定了影子该有多长——这一半来自公转；而「正午」是哪一刻由本地经线给出，那一半来自自转，还附带着经度差带来的 1.2 分钟。一个可观测的数由两笔账相接得出，这是本课程后面每一课都要反复走的形状：自转给出时刻，公转给出几何，两者相接才得到一个具体数值。</p>
+
+  <div class="quiz" data-quiz='[
+  {
+    "q": "下面哪个量必须由两笔账相接才能得出？",
+    "opts": [
+      "正午影长：公转给几何，自转给时刻",
+      "昼夜交替：自转一周，地面各点转一轮",
+      "日出方位的季节摆动：直射点纬度决定",
+      "四季的划分：太阳在黄道上的位置决定"
+    ],
+    "ans": 0,
+    "why": "正午影长要定「正午」是哪一刻，用本地经线（自转）；\n要定影子多长，用直射点纬度（公转）。\n另外三个各自只用到一笔账。"
+  },
+  {
+    "q": "同一根竿上的两个可观测数：\n无锡一米杆正午影长 夏至 0.14 米、冬至 1.43 米；\n香港 2026 日出方位角 夏至 64°、冬至 115°。\n\n① 这两个数各自重复一次的周期是多少？\n分别记在哪笔账上？\n② 同一天里影子先由长变短、再由短变长，\n这一部分按什么周期重复？\n③ 「哪一刻算正午」用的是哪一笔账？\n无锡那一刻落在手表 11:58.8，\n差的 1.2 分钟由什么决定？",
+    "answer": "① 两个数都是年周期：\n影长在 0.14 米与 1.43 米之间往返，\n方位角在 64° 与 115° 之间往返，\n一年走一个来回，\n重复周期是回归年 365.2422 日，都记在公转账上。\n\n② 一天之内的长—短—长按日重复：\n影子随太阳在天空中的位置移动，\n地球转一圈（太阳日 24 小时）重复一次，\n记在自转账上。\n\n③ 「正午」是太阳横越本地子午线的时刻，\n由本地经线给出，属于自转账。\n无锡 120.3°E 在 120°E 以东，\n地方时比区时早 $0.3° \\times 4 = 1.2$ 分钟，\n所以影子最短的一刻落在手表 11:58.8。\n这个数正是两笔账相接：自转给时刻、公转给几何。",
+    "criteria": "① 两个数都判为年周期、记公转账，\n并给出 365.2422 日（写约 365 日或约 1 年也对）。\n只判对一个数算部分通过。\n\n② 答出一天之内的长短变化按日重复、记自转账，\n依据是自转（24 小时／每小时 15°）。\n\n③ 答出「正午」由本地经线给出、属于自转账，\n并算出 1.2 分钟来自 $0.3° \\times 4$ 分钟每度，\n说清无锡在中央经线以东所以更早。\n\n三条都答到算通过；\n① 的周期值写成 24 小时按不通过处理\n（那是把年周期错记成了日周期）。"
+  }
+]'></div>
+
+  <h2>两个容易记错的地方</h2>
+
+  <ul>
+    <li><b>「地球在动」不能同时顶两笔账。</b> 说四季更替和昼夜交替都是地球在动的结果，就丢掉了两个周期之间的区别。这两笔账的周期分别是 24 小时和 365.2422 日，判据就落在周期上。</li>
+    <li><b>「地轴倾斜着绕太阳转」把两件事合成了一件。</b> 地轴的倾斜是自转轴相对公转轨道面的一个角度，它本身不产生昼夜交替；四季要的是这个倾斜在公转一周的过程中造成的太阳热量分配变化。后面的课会把这两个量分别定出来：黄赤交角是一个角度，公转周期是一个时间。</li>
+  </ul>
+
+  <p>两笔账的分法也回答了「能判断」与「能算数」之间的距离。说出「夏至昼长夜短」只需要知道周期性，计算昼长还要有具体数值。天文台那两列数就是差别的样子：日出方位角从 64° 到 115°，上中天仰角从 44° 到 89°。本章结束时，这些数要能由你自己算出来，并且每一个数都能讲清它落在哪一笔账上。</p>
+
+  <div class="lesson-practice">
+    <div class="lesson-practice__head">
+      <span class="lesson-practice__level">练习</span>
+      <span class="lesson-practice__title">第 1 步 · 用两个周期核对本周的天象</span>
+    </div>
+
+      <ol>
+        <li>记下今天的日期，在二十四节气表里找到最近的两个中气，读出它们的日出方位角。</li>
+        <li>判断日出方位角该往哪边走。春分到夏至这一段，方位角由 90° 减小到 64°，日出点朝正东以北的方向移动。</li>
+        <li>在天气应用里查出今天的日出时刻与日落时刻，算出昼长；再给昼长与方位角各写一个重复周期，按周期把它们各归一笔账。</li>
+      </ol>
+  </div>
+
+  <div class="lesson-practice">
+    <div class="lesson-practice__head">
+      <span class="lesson-practice__level">练习</span>
+      <span class="lesson-practice__title">第 2 步 · 把两笔账贴到自己的记录上</span>
+    </div>
+
+      <ol>
+        <li>挑一个有太阳的上午，每隔 30 分钟看一次太阳在窗户上的位置，记下它在窗框上的方位。相邻两次记录之间，方位都往西移过一段。</li>
+        <li>在同一张纸上记下当天正午的影长，第二天、第三天再各记一次。三天的影长差别很小：二分日前后，一米杆的正午影长一天也只变三厘米上下。</li>
+        <li>把两类记录放在一起比：哪一类在半天里就看得出变化，哪一类要一周才看得出？两个答案分别对应哪笔账？</li>
+      </ol>
+  </div>
+
+  <ul class="lesson-resources">
+    <li><a href="https://basic.smartedu.cn/tchMaterial">人教版《选择性必修一》第一章 地球的运动</a><span class="lesson-resources__meta">教材基准 · 本章范围：第一节 地球的自转和公转、第二节 地球运动的地理意义</span></li>
+    <li><a href="https://www.hko.gov.hk/tc/gts/astron2026/files/2026SolarTerms24.pdf">香港天文台年曆 2026 · 二十四節氣</a><span class="lesson-resources__meta">官方数据 · 十二个中气的日期、太阳直射点纬度圈、日出／上中天／日落的方位角与仰角</span></li>
+    <li><a href="https://www.hko.gov.hk/tc/gts/astron2026/files/HKO_almanac_2026.pdf">香港天文台年曆 2026 · 視太陽時的計算方法</a><span class="lesson-resources__meta">官方口径 · 视太阳时的定义、标准时间与经度差的换算、均时差的来源</span></li>
+    <li><a href="https://my.weather.gov.hk/tc/gts/astronomy/SunPathDay3_ue.htm">互動版太陽路徑圖</a><span class="lesson-resources__meta">官方工具 · 输入日期与经纬度，看当日太阳路径与逐时位置，昼夜用底色区分</span></li>
+  </ul>
+
+  <div class="lesson-related">
+    <a href="0001-intro.shadow.html">上节课：正午的影子</a>
+    <a href="0003-obliquity.seasons.html">下节课：黄赤交角与四季</a>
+  </div>
+
+  <!-- ── 提问提示：固定写法，别删 ── -->
+
+  <div class="lesson-ask">
+    <b>没看懂？随时问</b>
+    把看不懂的段落（或报错）原样复制回会话，说一句哪里不懂就行，我只解释这一段，不打断你的进度。
+  </div>
+
+  <!-- ── 上/下节课指针由渲染器按 curriculum.yaml 的 nodes 顺序算（第一课无 --prev、最后一课无 --next） ── -->
+
+  <nav class="lesson-nav" aria-label="上一课 / 下一课">
+    <a class="lesson-nav__link lesson-nav__link--prev" href="0001-intro.shadow.html">
+      <span class="lesson-nav__dir">上节课</span>
+      <span class="lesson-nav__title">正午的影子</span>
+    </a>
+    <a class="lesson-nav__link lesson-nav__link--next" href="0003-obliquity.seasons.html">
+      <span class="lesson-nav__dir">下节课</span>
+      <span class="lesson-nav__title">黄赤交角与四季</span>
+    </a>
+  </nav>
+
+  <footer class="lesson-footer">
+    StudyMate · 0002 地球的两种运动 · 本地学习工作区
+  </footer>
+
+</article>
+
+<script src="../../../assets/sayo/sayo.js"></script>
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<script src="../../../assets/katex/katex.min.js" defer></script>
+<script src="../../../assets/lesson-math.js" defer></script>
+<script src="../assets/quiz.js" defer></script>
+<script src="../assets/lesson-toc.js" defer></script>
+<script>LearnTheme.wire(document.getElementById('lesson-theme-checkbox'));</script>
+</body>
+</html>

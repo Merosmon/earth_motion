@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于本站 · 地球运动</title>
+
+<!-- 共享层在 learning/assets/，本页在 learning/subjects/<slug>/ 下，所以是 ../../assets/ -->
+<link rel="stylesheet" href="../../assets/sayo/sayo.css">
+<link rel="stylesheet" href="../../assets/learn-theme.css">
+<link rel="stylesheet" href="assets/style.css">
+<script src="../../assets/learn-theme.js"></script>
+<script>LearnTheme.apply();</script>
+
+<style>
+  .about { max-width: 46rem; margin: 0 auto; padding: var(--syo-space-6) var(--syo-space-4) 4rem; }
+  .about__kicker { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+                   color: var(--syo-text-muted); margin: 0 0 .4rem; }
+  .about h1 { font-size: 1.9rem; margin: 0 0 .6rem; line-height: 1.25; }
+  .about h2 { font-size: 1.25rem; margin: 2.4rem 0 .8rem; padding-bottom: .35rem;
+              border-bottom: 1px solid var(--syo-border); }
+  .about h3 { font-size: 1.02rem; margin: 1.4rem 0 .5rem; }
+  .about p, .about li { line-height: 1.85; }
+  .about ul, .about ol { padding-left: 1.3rem; }
+  .about li { margin: .3rem 0; }
+  .about__lede { color: var(--syo-text-muted); font-size: 1.02rem; margin: 0 0 1.6rem; }
+  .about__facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+                  gap: .8rem; margin: 1.4rem 0 0; }
+  .about__fact { background: var(--syo-bg-surface); border: 1px solid var(--syo-border);
+                 border-radius: var(--syo-radius-md); padding: .9rem 1rem; }
+  .about__fact b { display: block; font-size: 1.45rem; line-height: 1.2; }
+  .about__fact span { color: var(--syo-text-muted); font-size: .82rem; }
+  .about__card { background: var(--syo-bg-surface); border: 1px solid var(--syo-border);
+                 border-radius: var(--syo-radius-md); padding: 1.1rem 1.2rem; margin: 1rem 0; }
+  .about__card h3 { margin-top: 0; }
+  .about__tag { display: inline-block; font-size: .75rem; color: var(--syo-text-muted);
+                border: 1px solid var(--syo-border); border-radius: 999px;
+                padding: .12rem .6rem; margin: 0 .35rem .35rem 0; }
+  .about__cost { width: 100%; border-collapse: collapse; margin: .8rem 0; font-size: .93rem; }
+  .about__cost th, .about__cost td { text-align: left; padding: .5rem .6rem;
+                                     border-bottom: 1px solid var(--syo-border); }
+  .about__cost th { color: var(--syo-text-muted); font-weight: 600; }
+  .about__note { border-left: 3px solid var(--syo-accent, #58a6ff); padding: .2rem 0 .2rem .9rem;
+                 color: var(--syo-text-muted); margin: 1rem 0; }
+  .about__links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+  .about__links a { border: 1px solid var(--syo-border); border-radius: var(--syo-radius-sm);
+                    padding: .45rem .9rem; text-decoration: none; font-size: .93rem; }
+  .about__foot { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--syo-border);
+                 color: var(--syo-text-muted); font-size: .88rem; }
+</style>
+</head>
+<body class="lesson-body">
+<main class="about">
+
+  <p class="about__kicker">关于本站</p>
+  <h1>把一章地理课本，做成一个能自己算数的网站</h1>
+  <p class="about__lede">
+    这是我在高中阶段给自己搭的一门课。<strong>AmaAstro</strong> 是署名。
+    起因很简单：我能判断性质——夏至昼长夜短、直射点在北半球——但给不出一个具体的数。
+    没学过球面几何，于是每到要算的时候只能背结论。这门课就是冲这个缺口去的。
+  </p>
+
+  <div class="about__facts">
+    <div class="about__fact"><b>22</b><span>个学习节点（概念 8 / 实操 10 / 实验 4）</span></div>
+    <div class="about__fact"><b>4</b><span>个节点已完成并上线</span></div>
+    <div class="about__fact"><b>18</b><span>道练习题（选择＋开放，含判分要点）</span></div>
+    <div class="about__fact"><b>10</b><span>张自己算过坐标的配图</span></div>
+  </div>
+
+  <h2>这是什么</h2>
+  <p>
+    一门高中地理「地球运动」的完整课。教材基准是人教版选择性必修一第一章，
+    范围与深度对着教育部《普通高中地理课程标准》定——选择性必修 1 的内容要求 1.1，
+    以及学业质量水平 3-2 / 4-2。
+  </p>
+  <p>主线不是"背结论"，而是一条能自己走通的因果链：</p>
+  <blockquote class="about__note">
+    黄赤交角 → 地轴与阳光的夹角 → 太阳直射点往返 → 正午太阳高度与昼夜长短 → 四季与极昼极夜
+  </blockquote>
+  <p>
+    每个节点都是一课，含讲解、自己产的配图、练习题（选择题点选即时判分，开放题附参考答案与判分要点）。
+  </p>
+
+  <h2>我给自己定的两条硬规矩</h2>
+
+  <div class="about__card">
+    <h3>一、数据必须来自权威来源，并且逐条对过</h3>
+    <p>
+      课里出现的每一个官方数字，都来自可追溯的来源并对过表：
+    </p>
+    <ul>
+      <li><strong>教材范围</strong>：人教版选择性必修一第一章的官方目录记录</li>
+      <li><strong>深浅标准</strong>：教育部《普通高中地理课程标准（2017 年版 2020 年修订）》</li>
+      <li><strong>太阳位置数据</strong>：香港天文台的年历与二十四节气表——它给出每个中气的
+          太阳直射点纬度圈、上中天时间与仰角、日出日落方位角</li>
+    </ul>
+    <p>
+      举个具体的对表：用 <code>正午太阳高度 = 90° − |纬度 − 直射点纬度|</code>
+      复算香港十二个中气，全部落在天文台公布整数值的 1° 以内。
+    </p>
+  </div>
+
+  <div class="about__card">
+    <h3>二、图上的每个角度都要能算出来，不能"看着差不多"</h3>
+    <p>
+      配图全部是自己算坐标、写 SVG 画的。这条规矩是被自己坑出来的——
+      有一版图把「地轴与铅垂线成 23.5°」量在了错误的一侧，实际画成 66.5°，
+      而"晨昏圈垂直于阳光"这个关系就跟着不成立了。
+      后来写了个量角脚本，一测就露：<strong>夹角 67.86°，而它必须正好是 90°</strong>。
+    </p>
+    <p>
+      现在每张涉及角度的图都要过一遍脚本核算：晨昏圈与阳光的夹角、弧线两端到顶点的半径、
+      节气点是否落在曲线上、文字框有没有互相压住。图上每个数字都来自这些核算，不是目测。
+    </p>
+  </div>
+
+  <h2>过程中的两个工程问题</h2>
+  <p>课程本身是"内容"，但要做成能用的东西，绕不开两个工程问题。这两块是我觉得最值得说的部分。</p>
+
+  <div class="about__card">
+    <h3>把一课打包成一个 HTML 文件</h3>
+    <p>
+      课件页面本身引用了九个文件（样式、主题、公式排版、题目交互），
+      外加 KaTeX 的二十个字体文件。单独把一个 <code>.html</code> 发出去，对方打开只会看到
+      没有样式、公式不显示、题目点不动的纯文本。
+    </p>
+    <p>
+      所以我写了个打包器：把样式与脚本内联进页面、把字体转成 data URI 内嵌，
+      最后出来一个 <strong>约 780 KB 的独立文件</strong>——发给任何人，双击就能学。
+    </p>
+    <p>过程中踩到三个坑，都是量出来才发现的：</p>
+    <ul>
+      <li>带 <code>src</code> 的 <code>&lt;script&gt;</code> 标签没摘干净——浏览器会去请求一个
+          不存在的相对路径，还会让脚本执行两次</li>
+      <li>字体的 MIME 类型被写成 <code>application/octet-stream</code>——
+          浏览器对字体有类型白名单，会被拒绝加载，公式里的根号与积分号就会掉成默认字体</li>
+      <li>写了个校验脚本，它连续三次把「注释里的说明文字」当成「没打干净的引用」报警——
+          <strong>工具报的"问题"本身也是证据，得先验证它是不是真问题</strong></li>
+    </ul>
+  </div>
+
+  <div class="about__card">
+    <h3>做一个离线的安卓版</h3>
+    <p>
+      静态网页要在手机上用，最麻烦的是"本地文件打不开"。
+      为了把课程装进一个离线 App，试了五条路，每条失败的方式都不一样：
+    </p>
+    <ol>
+      <li><code>file:///android_asset/</code> 直接读 → <code>ERR_FILE_NOT_FOUND</code>
+          （Android 10 起收紧了 <code>file://</code> 的读取）</li>
+      <li>假域名 + 拦截请求 → <code>ERR_HTTP_RESPONSE_CODE_FAILURE</code>（返回的响应被判为失败）</li>
+      <li>App 内部起一个真的 HTTP 服务器 → 白屏；加了屏上诊断后发现「请求 0」，
+          WebView 根本没连上它</li>
+      <li>把 APK 里的 HTML 读出来直接注入 → <code>FileNotFoundException</code>，
+          而那个文件明明在包里（"文件在包里却读不到"）</li>
+      <li><strong>把课程内容在编译期变成代码里的字符串常量</strong> → 成了</li>
+    </ol>
+    <p>
+      最后这条路绕开了所有外部依赖：运行时内容已经在内存里，
+      没有文件、没有 URL、没有端口。代价是包变大，换来的是"装上就能用"。
+    </p>
+    <p>
+      同一条路上还修掉两个安卓工具链的坑：资源打包器对某个目录结构静默失效（退出码 0 但产物是空的），
+      以及 build-tools 34 自带的 <code>d8</code> 在 JDK 21 下会抛空指针——换成 build-tools 35 才通。
+    </p>
+  </div>
+
+  <h2>我是怎么做这些内容的</h2>
+  <p>
+    课的内容、配图与题目，是在一个 AI 学习助手的配合下产出的，按角色分工：
+    有人负责讲、有人负责出题与判分、有人负责查资料。我做的事是另外三件：
+  </p>
+  <ul>
+    <li><strong>定范围与验收</strong>：哪些内容进、哪些不进（明确不学大气运动、水循环），
+        以及"什么算做完了"</li>
+    <li><strong>验算与对表</strong>：官方数据逐条核对，图上角度逐个量——
+        上面那条 67.86° 的错误就是这么抓出来的</li>
+    <li><strong>判断与纠偏</strong>：模型给的东西不一定对。有一处极昼边界的数字算错了
+        （写成 69°48′，正解是 69°42′），是我复核时发现并改掉的</li>
+  </ul>
+  <p>
+    所以这份作品里有它该有的东西：<strong>一个真实的目标、可追溯的数据、
+    自己写脚本验证过的图，以及一段试错记录。</strong>工具是新的，验收是我做的。
+  </p>
+
+  <h2>怎么用</h2>
+  <table class="about__cost">
+    <tr><th>方式</th><th>适合</th><th>说明</th></tr>
+    <tr>
+      <td>在线看</td>
+      <td>手机、电脑</td>
+      <td>直接点<a href="index.html">课程首页</a>进各课；公式与配图都是排好版的</td>
+    </tr>
+    <tr>
+      <td>下载单文件</td>
+      <td>离线、发给别人</td>
+      <td>每一课都能导出成一个约 780 KB 的独立 HTML，双击就开，不需要网络</td>
+    </tr>
+    <tr>
+      <td>安卓离线版</td>
+      <td>手机上随时学</td>
+      <td>APK 里带着全部课程内容，飞行模式下也能用</td>
+    </tr>
+  </table>
+
+  <h2>技术说明</h2>
+  <p>
+    <span class="about__tag">静态 HTML</span>
+    <span class="about__tag">离线 KaTeX 公式排版</span>
+    <span class="about__tag">手写 SVG 配图</span>
+    <span class="about__tag">Python 工具链</span>
+    <span class="about__tag">Android WebView</span>
+    <span class="about__tag">WebView2</span>
+  </p>
+  <p>
+    站点是完全静态的：没有后端、没有数据库、不采集任何访问数据。
+    课件里的题目判分在浏览器本地完成。
+  </p>
+
+  <h2>进度与更新</h2>
+  <ul>
+    <li><strong>2026-10</strong>：搭起课程骨架（22 节点）；完成第 1–4 课
+        （正午的影子、地球的两种运动、黄赤交角与四季、晨昏圈是条大圆）</li>
+    <li>接下来：第 5 课「球面上的三角形」——补上把"能判断"变成"能算数"的那件工具</li>
+  </ul>
+
+  <h2>内容与来源声明</h2>
+  <p>
+    课程数据引用香港天文台公开年历与二十四节气资料、人民教育出版社教材目录记录、
+    教育部《普通高中地理课程标准（2017 年版 2020 年修订）》。
+    站点内容为个人学习整理，<strong>如与官方来源不一致，以官方来源为准</strong>；
+    涉及天文数值的正式用途请查阅天文台原始资料。
+  </p>
+
+  <div class="about__links">
+    <a href="index.html">← 回到课程首页</a>
+    <a href="GLOSSARY.html">术语表</a>
+    <a href="RESOURCES.html">资源与来源清单</a>
+  </div>
+
+  <p class="about__foot">
+    AmaAstro · 高中地理「地球运动」自学课程 · 内容随进度更新
+  </p>
+
+</main>
+</body>
+</html>
